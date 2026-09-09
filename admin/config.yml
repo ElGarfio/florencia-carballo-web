@@ -25,7 +25,7 @@ collections:
       - {label: "Medium (Italian)", name: "medium_it", widget: "string", default: "Olio su tela"}
       - {label: "Medium (Spanish)", name: "medium_es", widget: "string", default: "Óleo sobre lienzo"}
       - {label: "Year", name: "year", widget: "string", default: "2024"}
-      - {label: "Images (add multiple)", name: "images", widget: "list", required: true, min: 1, max: 10, field: {label: "Image", name: "image", widget: "image"}, hint: "Upload multiple photos of the same artwork (different angles, details). First image is the main one."}
+      - {label: "Images (add multiple)", name: "images", widget: "list", required: true, min: 1, max: 10, field: {label: "Image", name: "image", widget: "image", required: false}, hint: "Upload multiple photos of the same artwork (different angles, details). First image is the main one."}
       - {label: "Status", name: "status", widget: "select", options: ["available", "sold", "commission"], default: "available"}
       - {label: "Price (EUR)", name: "price", widget: "number", required: false}
       - {label: "Stripe Payment Link", name: "stripe_link", widget: "string", required: false, hint: "Paste your Stripe payment link here (e.g., https://buy.stripe.com/...)"}
@@ -42,20 +42,20 @@ collections:
         label: "Homepage Images"
         file: "content/pages/homepage.yml"
         fields:
-          - {label: "Hero Background (full-screen photo)", name: "hero_background", widget: "image", hint: "Main full-screen photo at the top of the homepage"}
-          - {label: "Residential Inset Photo", name: "inset_photo", widget: "image", hint: "Small square photo, 'Residential' card overlapping the hero"}
-          - {label: "Gastronomy & Art Photo", name: "gastro_photo", widget: "image", hint: "Restaurant commission photo in the services section"}
-          - {label: "Colour Studies Photo", name: "color_photo", widget: "image", hint: "Photo behind 'Colour Studies' card"}
-          - {label: "Corporate Projects Photo", name: "corporate_photo", widget: "image", hint: "Photo behind 'Corporate Projects' card"}
+          - {label: "Hero Background (full-screen photo)", name: "hero_background", widget: "image", hint: "Main full-screen photo at the top of the homepage", required: false}
+          - {label: "Residential Inset Photo", name: "inset_photo", widget: "image", hint: "Small square photo, 'Residential' card overlapping the hero", required: false}
+          - {label: "Gastronomy & Art Photo", name: "gastro_photo", widget: "image", hint: "Restaurant commission photo in the services section", required: false}
+          - {label: "Colour Studies Photo", name: "color_photo", widget: "image", hint: "Photo behind 'Colour Studies' card", required: false}
+          - {label: "Corporate Projects Photo", name: "corporate_photo", widget: "image", hint: "Photo behind 'Corporate Projects' card", required: false}
 
       - name: "studio"
         label: "Studio Page Images"
         file: "content/pages/studio.yml"
         fields:
-          - {label: "Artist Portrait", name: "portrait", widget: "image", hint: "Photo of Florencia, 4:5 vertical ratio, top of the Studio page"}
-          - {label: "Process Photo 1", name: "process_1", widget: "image", hint: "Small square photo, studio process"}
-          - {label: "Process Photo 2", name: "process_2", widget: "image", hint: "Small square photo, studio process"}
-          - {label: "Gastronomic Havens Photo", name: "gastro_photo", widget: "image", hint: "Large photo in the 'Bespoke Excellence' section"}
+          - {label: "Artist Portrait", name: "portrait", widget: "image", hint: "Photo of Florencia, 4:5 vertical ratio, top of the Studio page", required: false}
+          - {label: "Process Photo 1", name: "process_1", widget: "image", hint: "Small square photo, studio process", required: false}
+          - {label: "Process Photo 2", name: "process_2", widget: "image", hint: "Small square photo, studio process", required: false}
+          - {label: "Gastronomic Havens Photo", name: "gastro_photo", widget: "image", hint: "Large photo in the 'Bespoke Excellence' section", required: false}
 
       - name: "contact"
         label: "Contact Information"
@@ -65,8 +65,8 @@ collections:
           - {label: "Location", name: "location", widget: "string", default: "Madrid, Spain"}
           - {label: "Instagram URL", name: "instagram", widget: "string", required: false}
           - {label: "Formspree Form ID", name: "formspree_id", widget: "string", required: false, hint: "Your Formspree form ID (e.g., xpzgkwqr)"}
-          - {label: "Contact Page Hero Photo", name: "hero_photo", widget: "image", hint: "Close-up photo next to the contact form title"}
-          - {label: "Commercial Spaces Photo", name: "commercial_photo", widget: "image", hint: "Wide banner photo near the bottom of the contact page"}
+          - {label: "Contact Page Hero Photo", name: "hero_photo", widget: "image", hint: "Close-up photo next to the contact form title", required: false}
+          - {label: "Commercial Spaces Photo", name: "commercial_photo", widget: "image", hint: "Wide banner photo near the bottom of the contact page", required: false}
       - name: "text_home"
         label: "Homepage Text"
         file: "content/pages/text-home.yml"
@@ -75,240 +75,240 @@ collections:
             name: "home_badge"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Hero H1"
             name: "home_hero_h1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Hero P"
             name: "home_hero_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Cta Commission"
             name: "home_cta_commission"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Cta Gallery"
             name: "home_cta_gallery"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Inset Label"
             name: "home_inset_label"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Inset Caption"
             name: "home_inset_caption"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Services Badge"
             name: "home_services_badge"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Services Title"
             name: "home_services_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Gastro Title"
             name: "home_gastro_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Gastro P"
             name: "home_gastro_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Gastro Link"
             name: "home_gastro_link"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Color Title"
             name: "home_color_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Color Sub"
             name: "home_color_sub"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Quote Text"
             name: "home_quote_text"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Quote Author"
             name: "home_quote_author"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Corporate Title"
             name: "home_corporate_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Corporate P"
             name: "home_corporate_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Corporate Link"
             name: "home_corporate_link"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Process Badge"
             name: "home_process_badge"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Process Title"
             name: "home_process_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Step1 Title"
             name: "home_step1_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Step1 P"
             name: "home_step1_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Step2 Title"
             name: "home_step2_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Step2 P"
             name: "home_step2_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Step3 Title"
             name: "home_step3_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Step3 P"
             name: "home_step3_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Step4 Title"
             name: "home_step4_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Step4 P"
             name: "home_step4_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Process Cta"
             name: "home_process_cta"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Cta2 Title"
             name: "home_cta2_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Cta2 P"
             name: "home_cta2_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Cta2 Btn1"
             name: "home_cta2_btn1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Cta2 Btn2"
             name: "home_cta2_btn2"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
 
       - name: "text_gallery"
         label: "Gallery Page Text"
@@ -318,156 +318,156 @@ collections:
             name: "gallery_badge"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "H1"
             name: "gallery_h1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "P"
             name: "gallery_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Filter All"
             name: "gallery_filter_all"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Filter Landscapes"
             name: "gallery_filter_landscapes"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Filter Portraits"
             name: "gallery_filter_portraits"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Filter Stilllife"
             name: "gallery_filter_stilllife"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Quote"
             name: "gallery_quote"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Quote Author"
             name: "gallery_quote_author"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Invite Title"
             name: "gallery_invite_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Invite P"
             name: "gallery_invite_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Invite Placeholder"
             name: "gallery_invite_placeholder"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Invite Btn"
             name: "gallery_invite_btn"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Badge Available"
             name: "gallery_badge_available"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Badge Sold"
             name: "gallery_badge_sold"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Badge Commission"
             name: "gallery_badge_commission"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Purchase"
             name: "gallery_purchase"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Commission"
             name: "gallery_commission"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Request"
             name: "gallery_request"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Filter Abstract"
             name: "gallery_filter_abstract"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Filter Seascapes"
             name: "gallery_filter_seascapes"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Filter Urban"
             name: "gallery_filter_urban"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
 
       - name: "text_studio"
         label: "Studio Page Text"
@@ -477,128 +477,128 @@ collections:
             name: "studio_badge"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "H1"
             name: "studio_h1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Hero P"
             name: "studio_hero_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Hero Btn"
             name: "studio_hero_btn"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Hero Quote"
             name: "studio_hero_quote"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Vision Title"
             name: "studio_vision_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Vision P1"
             name: "studio_vision_p1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Vision P2"
             name: "studio_vision_p2"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Excellence Title"
             name: "studio_excellence_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Excellence Subtitle"
             name: "studio_excellence_subtitle"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Gastro Title"
             name: "studio_gastro_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Gastro P"
             name: "studio_gastro_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Commercial Title"
             name: "studio_commercial_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Commercial P"
             name: "studio_commercial_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Advisor"
             name: "studio_advisor"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Homes Title"
             name: "studio_homes_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Homes P"
             name: "studio_homes_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Bigquote"
             name: "studio_bigquote"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
 
       - name: "text_contact"
         label: "Contact Page Text"
@@ -608,233 +608,233 @@ collections:
             name: "contact_h1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Hero P"
             name: "contact_hero_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Form Title"
             name: "contact_form_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Name"
             name: "contact_form_name"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Name Placeholder"
             name: "contact_form_name_ph"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Email"
             name: "contact_form_email"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Email Placeholder"
             name: "contact_form_email_ph"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Space"
             name: "contact_form_space"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Space 1"
             name: "contact_form_space_1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Space 2"
             name: "contact_form_space_2"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Space 3"
             name: "contact_form_space_3"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Space 4"
             name: "contact_form_space_4"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Service"
             name: "contact_form_service"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Service 1"
             name: "contact_form_service_1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Service 2"
             name: "contact_form_service_2"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Service 3"
             name: "contact_form_service_3"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Service 4"
             name: "contact_form_service_4"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Details"
             name: "contact_form_details"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Details Placeholder"
             name: "contact_form_details_ph"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Form Submit"
             name: "contact_form_submit"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Commissions Title"
             name: "contact_commissions_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Commissions P"
             name: "contact_commissions_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Commissions Link"
             name: "contact_commissions_link"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Advice Title"
             name: "contact_advice_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Advice P"
             name: "contact_advice_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
           - label: "Advice Li1"
             name: "contact_advice_li1"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Advice Li2"
             name: "contact_advice_li2"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Advice Li3"
             name: "contact_advice_li3"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Connect"
             name: "contact_connect"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Location"
             name: "contact_location"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Available"
             name: "contact_available"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Commercial Title"
             name: "contact_commercial_title"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Commercial P"
             name: "contact_commercial_p"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "text"}
-              - {label: "Italian", name: "it", widget: "text"}
-              - {label: "Spanish", name: "es", widget: "text"}
+              - {label: "English", name: "en", widget: "text", required: false}
+              - {label: "Italian", name: "it", widget: "text", required: false}
+              - {label: "Spanish", name: "es", widget: "text", required: false}
 
       - name: "text_global"
         label: "Global (Navigation & Footer)"
@@ -844,76 +844,76 @@ collections:
             name: "nav_home"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Nav Gallery"
             name: "nav_gallery"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Nav Studio"
             name: "nav_studio"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Nav Contact"
             name: "nav_contact"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Tagline"
             name: "footer_tagline"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Copyright"
             name: "footer_copyright"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Location"
             name: "footer_location"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Links Gallery"
             name: "footer_links_gallery"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Links Studio"
             name: "footer_links_studio"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Links Commissions"
             name: "footer_links_commissions"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Links Contact"
             name: "footer_links_contact"
             widget: "object"
             fields:
-              - {label: "English", name: "en", widget: "string"}
-              - {label: "Italian", name: "it", widget: "string"}
-              - {label: "Spanish", name: "es", widget: "string"}
+              - {label: "English", name: "en", widget: "string", required: false}
+              - {label: "Italian", name: "it", widget: "string", required: false}
+              - {label: "Spanish", name: "es", widget: "string", required: false}

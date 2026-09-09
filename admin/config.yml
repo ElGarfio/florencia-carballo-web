@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+
+media_folder: "imagenes"
+public_folder: "/imagenes"
+
+locale: "en"
+
+collections:
+  - name: "artworks"
+    label: "Gallery Artworks"
+    label_singular: "Artwork"
+    folder: "content/artworks"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title_en"
+    editor:
+      preview: false
+    fields:
+      - {label: "Title (English)", name: "title_en", widget: "string"}
+      - {label: "Title (Italian)", name: "title_it", widget: "string"}
+      - {label: "Title (Spanish)", name: "title_es", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["Landscapes", "Portraits", "Still Life", "Abstract", "Seascapes", "Urban"], required: false, hint: "Select a category for filtering in the gallery"}
+      - {label: "Medium (English)", name: "medium_en", widget: "string", default: "Oil on canvas"}
+      - {label: "Medium (Italian)", name: "medium_it", widget: "string", default: "Olio su tela"}
+      - {label: "Medium (Spanish)", name: "medium_es", widget: "string", default: "Óleo sobre lienzo"}
+      - {label: "Year", name: "year", widget: "string", default: "2024"}
+      - {label: "Images (add multiple)", name: "images", widget: "list", required: true, min: 1, max: 10, field: {label: "Image", name: "image", widget: "image"}, hint: "Upload multiple photos of the same artwork (different angles, details). First image is the main one."}
+      - {label: "Status", name: "status", widget: "select", options: ["available", "sold", "commission"], default: "available"}
+      - {label: "Price (EUR)", name: "price", widget: "number", required: false}
+      - {label: "Stripe Payment Link", name: "stripe_link", widget: "string", required: false, hint: "Paste your Stripe payment link here (e.g., https://buy.stripe.com/...)"}
+      - {label: "Display Order", name: "order", widget: "number", default: 1, hint: "Lower numbers appear first"}
+      - {label: "Dimensions", name: "dimensions", widget: "string", required: false, hint: "e.g., 60×80cm"}
+      - {label: "Description (English)", name: "description_en", widget: "text", required: false}
+      - {label: "Description (Italian)", name: "description_it", widget: "text", required: false}
+      - {label: "Description (Spanish)", name: "description_es", widget: "text", required: false}
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "homepage"
+        label: "Homepage Images"
+        file: "content/pages/homepage.yml"
+        fields:
+          - {label: "Hero Background (full-screen photo)", name: "hero_background", widget: "image", hint: "Main full-screen photo at the top of the homepage"}
+          - {label: "Residential Inset Photo", name: "inset_photo", widget: "image", hint: "Small square photo, 'Residential' card overlapping the hero"}
+          - {label: "Gastronomy & Art Photo", name: "gastro_photo", widget: "image", hint: "Restaurant commission photo in the services section"}
+          - {label: "Colour Studies Photo", name: "color_photo", widget: "image", hint: "Photo behind 'Colour Studies' card"}
+          - {label: "Corporate Projects Photo", name: "corporate_photo", widget: "image", hint: "Photo behind 'Corporate Projects' card"}
+
+      - name: "contact"
+        label: "Contact Information"
+        file: "content/pages/contact.yml"
+        fields:
+          - {label: "Email", name: "email", widget: "string", default: "studio@florenciacarballo.com"}
+          - {label: "Location", name: "location", widget: "string", default: "Madrid, Spain"}
+          - {label: "Instagram URL", name: "instagram", widget: "string", required: false}
+          - {label: "Formspree Form ID", name: "formspree_id", widget: "string", required: false, hint: "Your Formspree form ID (e.g., xpzgkwqr)"}
+          - {label: "Contact Page Hero Photo", name: "hero_photo", widget: "image", hint: "Close-up photo next to the contact form title"}
+          - {label: "Commercial Spaces Photo", name: "commercial_photo", widget: "image", hint: "Wide banner photo near the bottom of the contact page"}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html data-page="gallery" lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Florencia Carballo — Gallery of bespoke impressionist artworks for commercial and residential spaces."/>
+  <title>Gallery — Florencia Carballo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#585e76","primary-dim":"#4c526a","primary-container":"#dce1fe","on-primary":"#faf8ff","on-primary-container":"#4b5168","secondary-container":"#feecce","on-secondary-container":"#635740","tertiary-container":"#e2ffd9","on-tertiary-container":"#4b6447","surface":"#fcf9f5","surface-container":"#f0eee9","surface-container-low":"#f6f3ef","surface-container-highest":"#e4e2dc","surface-container-lowest":"#ffffff","surface-dim":"#dcdad3","on-surface":"#32332f","on-surface-variant":"#5f5f5b","outline":"#7b7b76","outline-variant":"#b3b2ac"},fontFamily:{"headline":["Noto Serif","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"}}}}</script>
+  <style>
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+    .imp-shadow{box-shadow:0 40px 60px -15px rgba(88,94,118,0.14)}
+    .masonry{column-count:1;column-gap:1.5rem}
+    @media(min-width:768px){.masonry{column-count:2}}
+    .masonry-item{break-inside:avoid;margin-bottom:1.5rem}
+    .ph{background:linear-gradient(135deg,#e4e2dc,#eae8e2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#7b7b76;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .ph .material-symbols-outlined{font-size:28px;opacity:.35}
+  </style>
+  <script src="i18n.js" defer></script>
+</head>
+<body class="bg-surface font-body text-on-surface">
+
+<!-- NAVIGATION -->
+<header class="bg-white/70 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-outline-variant/20">
+  <div class="flex justify-between items-center px-6 md:px-8 h-20 max-w-7xl mx-auto">
+    <div class="flex items-center gap-3">
+      <button id="menu-btn" class="text-slate-700 hover:opacity-70 md:hidden"><span class="material-symbols-outlined" id="menu-icon">menu</span></button>
+      <a class="text-xl md:text-2xl font-black text-slate-800 tracking-tighter font-headline italic" href="index.html">FLORENCIA CARBALLO</a>
+    </div>
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" data-nav="home" data-i18n="nav.home" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Home</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery" class="font-label text-sm tracking-wide uppercase transition-colors duration-200">Gallery</a>
+      <a href="sobre-mi.html" data-nav="studio" data-i18n="nav.studio" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Studio</a>
+      <a href="contacto.html" data-nav="contact" data-i18n="nav.contact" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Contact</a>
+      <div class="flex items-center border border-outline-variant/40 rounded-full overflow-hidden ml-1">
+        <button onclick="FC.setLang('en')" data-lang-btn="en" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all">EN</button>
+        <button onclick="FC.setLang('it')" data-lang-btn="it" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all border-x border-outline-variant/40">IT</button>
+        <button onclick="FC.setLang('es')" data-lang-btn="es" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all">ES</button>
+      </div>
+    </nav>
+    <button class="text-slate-700 hover:opacity-70"><span class="material-symbols-outlined">shopping_basket</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white/98 border-t border-outline-variant/20 px-6 py-5">
+    <nav class="flex flex-col gap-1 mb-5">
+      <a href="index.html" data-nav="home" data-i18n="nav.home" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3 border-b border-outline-variant/20">Home</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery" class="font-label text-sm tracking-widest uppercase py-3 border-b border-outline-variant/20">Gallery</a>
+      <a href="sobre-mi.html" data-nav="studio" data-i18n="nav.studio" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3 border-b border-outline-variant/20">Studio</a>
+      <a href="contacto.html" data-nav="contact" data-i18n="nav.contact" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <span class="font-label text-xs text-slate-400 uppercase tracking-widest">Lang</span>
+      <div class="flex border border-outline-variant/40 rounded-full overflow-hidden">
+        <button onclick="FC.setLang('en')" data-lang-btn="en" class="font-label text-xs font-bold px-3 py-1.5 transition-all">EN</button>
+        <button onclick="FC.setLang('it')" data-lang-btn="it" class="font-label text-xs font-bold px-3 py-1.5 transition-all border-x border-outline-variant/40">IT</button>
+        <button onclick="FC.setLang('es')" data-lang-btn="es" class="font-label text-xs font-bold px-3 py-1.5 transition-all">ES</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+  <!-- Hero + Filters -->
+  <section class="mb-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10">
+      <div class="max-w-2xl">
+        <span class="inline-block font-label text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-4" data-i18n="gallery.badge">Portfolio</span>
+        <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-5" data-i18n-html="gallery.h1">The Impressionist <span class="italic font-light text-primary">Soul</span></h1>
+        <p class="text-on-surface-variant text-lg leading-relaxed font-light" data-i18n="gallery.p">Exploring the fleeting beauty of light and the vibrant textures of the natural world through the curated works of Florencia Carballo.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <button onclick="filterGallery('all')" data-filter="all" class="filter-btn px-6 py-2 rounded-full bg-primary text-on-primary text-sm font-medium tracking-wide hover:bg-primary-dim transition-all" data-i18n="gallery.filter.all">All Works</button>
+        <!-- FILTERS_PLACEHOLDER -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Masonry Gallery -->
+  <!-- HOW TO ADD YOUR IMAGES:
+       Replace each ph div with: <img src="imagenes/nombre.jpg" class="w-full object-cover" alt="Title"/>
+       Recommended sizes: tall images ~600×800px, wide images ~800×500px -->
+  <div class="masonry">
+    <!-- ARTWORKS_PLACEHOLDER -->
+  </div>
+
+  <!-- Quote -->
+  <section class="mt-28 mb-20 py-20 border-y border-surface-container-highest flex flex-col items-center text-center">
+    <span class="material-symbols-outlined text-primary/30 mb-8" style="font-size:48px">format_quote</span>
+    <blockquote class="font-headline text-3xl md:text-5xl max-w-4xl text-on-surface italic leading-tight mb-8" data-i18n="gallery.quote">"Everyone discusses my art and pretends to understand, as if it were necessary to understand, when it is simply necessary to love."</blockquote>
+    <cite class="font-label uppercase tracking-widest text-on-surface-variant font-bold text-sm" data-i18n="gallery.quote.author">— Claude Monet</cite>
+  </section>
+
+  <!-- Studio Invite / Newsletter -->
+  <section class="relative rounded-3xl overflow-hidden bg-primary-container p-10 md:p-20 flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-1">
+      <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary-container mb-5" data-i18n="gallery.invite.title">Enter the Studio</h2>
+      <p class="text-on-primary-container text-lg max-w-md mb-8" data-i18n="gallery.invite.p">Receive exclusive invitations to private viewings and previews of commissioned works.</p>
+      <div class="flex flex-col sm:flex-row gap-4 max-w-md">
+        <input class="flex-1 bg-surface-container-lowest border-none rounded-full px-6 py-4 text-on-surface focus:ring-2 focus:ring-primary outline-none" type="email" data-i18n-placeholder="gallery.invite.placeholder" placeholder="Your email address"/>
+        <button class="bg-primary text-on-primary rounded-full px-8 py-4 font-bold tracking-wide hover:bg-primary-dim transition-colors whitespace-nowrap" data-i18n="gallery.invite.btn">Join</button>
+      </div>
+    </div>
+    <div class="flex-shrink-0 w-56 aspect-[4/5] rounded-2xl overflow-hidden imp-shadow rotate-3">
+      <div class="ph w-full h-full"><span class="material-symbols-outlined">image</span><span>studio-photo.jpg</span></div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate-50 w-full py-14 px-6 md:px-8 border-t border-slate-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div>
+        <a class="text-lg font-bold text-slate-800 font-headline italic block mb-1" href="index.html">FLORENCIA CARBALLO</a>
+        <p class="text-slate-500 font-label text-xs tracking-wide uppercase" data-i18n="footer.tagline">Art & Personalised Advisory</p>
+      </div>
+      <nav class="flex flex-wrap gap-6 font-label text-sm tracking-wide uppercase text-slate-500">
+        <a class="hover:text-primary transition-colors" href="galeria.html" data-i18n="footer.links.gallery">Gallery</a>
+        <a class="hover:text-primary transition-colors" href="sobre-mi.html" data-i18n="footer.links.studio">Studio</a>
+        <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.commissions">Commissions</a>
+        <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.contact">Contact</a>
+      </nav>
+      <div class="text-slate-500 font-label text-xs tracking-wide">
+        <p class="uppercase mb-1" data-i18n="footer.location">Madrid, Spain</p>
+        <a href="mailto:studio@florenciacarballo.com" class="hover:text-primary transition-colors">studio@florenciacarballo.com</a>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-slate-200 text-center md:text-left">
+      <p class="text-slate-400 font-label text-xs tracking-wide" data-i18n="footer.copyright">© 2024 Florencia Carballo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn=document.getElementById('menu-btn'),menu=document.getElementById('mobile-menu'),icon=document.getElementById('menu-icon');
+  let open=false;
+  btn.addEventListener('click',()=>{open=!open;menu.classList.toggle('hidden',!open);icon.textContent=open?'close':'menu';});
+  menu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{open=false;menu.classList.add('hidden');icon.textContent='menu';}));
+</script>
+</body>
+</html>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4">
+  <button onclick="closeLightbox()" class="absolute top-6 right-6 z-10 text-white/80 hover:text-white transition-colors">
+    <span class="material-symbols-outlined text-4xl">close</span>
+  </button>
+  
+  <button id="prev-btn" onclick="prevImage()" class="absolute left-4 md:left-8 z-10 text-white/60 hover:text-white transition-colors">
+    <span class="material-symbols-outlined text-5xl">chevron_left</span>
+  </button>
+  
+  <button id="next-btn" onclick="nextImage()" class="absolute right-4 md:right-8 z-10 text-white/60 hover:text-white transition-colors">
+    <span class="material-symbols-outlined text-5xl">chevron_right</span>
+  </button>
+  
+  <div class="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center">
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain"/>
+  </div>
+  
+  <div id="image-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 font-label text-sm tracking-widest"></div>
+</div>
+
+<script>
+let currentImages = [];
+let currentIndex = 0;
+
+function openLightbox(artworkIndex, images) {
+  currentImages = images;
+  currentIndex = 0;
+  showImage();
+  document.getElementById('lightbox').classList.remove('hidden');
+  document.getElementById('lightbox').classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden');
+  document.getElementById('lightbox').classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+function showImage() {
+  document.getElementById('lightbox-img').src = currentImages[currentIndex];
+  document.getElementById('image-counter').textContent = `${currentIndex + 1} / ${currentImages.length}`;
+  
+  // Show/hide navigation buttons
+  document.getElementById('prev-btn').style.display = currentImages.length > 1 ? 'block' : 'none';
+  document.getElementById('next-btn').style.display = currentImages.length > 1 ? 'block' : 'none';
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % currentImages.length;
+  showImage();
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+  showImage();
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  const lightbox = document.getElementById('lightbox');
+  if (!lightbox.classList.contains('hidden')) {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+  }
+});
+
+// Close on background click
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target.id === 'lightbox') closeLightbox();
+});
+</script>
+

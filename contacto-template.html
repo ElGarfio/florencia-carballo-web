@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html data-page="contact" lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Florencia Carballo — Contact and commission inquiries for bespoke art and artistic advisory services."/>
+  <title>Contact — Florencia Carballo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#585e76","primary-dim":"#4c526a","primary-container":"#dce1fe","on-primary":"#faf8ff","on-primary-container":"#4b5168","secondary-container":"#feecce","on-secondary-container":"#635740","tertiary-container":"#e2ffd9","on-tertiary-container":"#4b6447","surface":"#fcf9f5","surface-container":"#f0eee9","surface-container-low":"#f6f3ef","surface-container-high":"#eae8e2","surface-container-highest":"#e4e2dc","surface-container-lowest":"#ffffff","surface-dim":"#dcdad3","on-surface":"#32332f","on-surface-variant":"#5f5f5b","outline":"#7b7b76","outline-variant":"#b3b2ac"},fontFamily:{"headline":["Noto Serif","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"}}}}</script>
+  <style>
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+    .imp-shadow{box-shadow:0 40px 60px -15px rgba(88,94,118,0.14)}
+    .ph{background:linear-gradient(135deg,#e4e2dc,#eae8e2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#7b7b76;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .ph .material-symbols-outlined{font-size:28px;opacity:.35}
+  </style>
+  <script src="i18n.js" defer></script>
+</head>
+<body class="bg-surface font-body text-on-surface">
+
+<!-- NAVIGATION -->
+<header class="bg-white/70 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-outline-variant/20">
+  <div class="flex justify-between items-center px-6 md:px-8 h-20 max-w-7xl mx-auto">
+    <div class="flex items-center gap-3">
+      <button id="menu-btn" class="text-slate-700 hover:opacity-70 md:hidden"><span class="material-symbols-outlined" id="menu-icon">menu</span></button>
+      <a class="text-xl md:text-2xl font-black text-slate-800 tracking-tighter font-headline italic" href="index.html">FLORENCIA CARBALLO</a>
+    </div>
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" data-nav="home" data-i18n="nav.home" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Home</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Gallery</a>
+      <a href="sobre-mi.html" data-nav="studio" data-i18n="nav.studio" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Studio</a>
+      <a href="contacto.html" data-nav="contact" data-i18n="nav.contact" class="font-label text-sm tracking-wide uppercase transition-colors duration-200">Contact</a>
+      <div class="flex items-center border border-outline-variant/40 rounded-full overflow-hidden ml-1">
+        <button onclick="FC.setLang('en')" data-lang-btn="en" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all">EN</button>
+        <button onclick="FC.setLang('it')" data-lang-btn="it" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all border-x border-outline-variant/40">IT</button>
+        <button onclick="FC.setLang('es')" data-lang-btn="es" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all">ES</button>
+      </div>
+    </nav>
+    <button class="text-slate-700 hover:opacity-70"><span class="material-symbols-outlined">shopping_basket</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white/98 border-t border-outline-variant/20 px-6 py-5">
+    <nav class="flex flex-col gap-1 mb-5">
+      <a href="index.html" data-nav="home" data-i18n="nav.home" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3 border-b border-outline-variant/20">Home</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3 border-b border-outline-variant/20">Gallery</a>
+      <a href="sobre-mi.html" data-nav="studio" data-i18n="nav.studio" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3 border-b border-outline-variant/20">Studio</a>
+      <a href="contacto.html" data-nav="contact" data-i18n="nav.contact" class="font-label text-sm tracking-widest uppercase py-3">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <span class="font-label text-xs text-slate-400 uppercase tracking-widest">Lang</span>
+      <div class="flex border border-outline-variant/40 rounded-full overflow-hidden">
+        <button onclick="FC.setLang('en')" data-lang-btn="en" class="font-label text-xs font-bold px-3 py-1.5 transition-all">EN</button>
+        <button onclick="FC.setLang('it')" data-lang-btn="it" class="font-label text-xs font-bold px-3 py-1.5 transition-all border-x border-outline-variant/40">IT</button>
+        <button onclick="FC.setLang('es')" data-lang-btn="es" class="font-label text-xs font-bold px-3 py-1.5 transition-all">ES</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+  <!-- Hero -->
+  <header class="mb-20 flex flex-col md:flex-row items-end gap-12">
+    <div class="flex-1">
+      <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl tracking-tight leading-none mb-6" data-i18n-html="contact.h1">Design &<br/><span class="italic text-primary">Atmosphere</span></h1>
+      <div class="w-28 h-1 bg-tertiary-container rounded-full mb-8"></div>
+      <p class="font-body text-on-surface-variant max-w-md text-lg leading-relaxed" data-i18n="contact.hero.p">Transforming spaces through bespoke commissions and professional artistic advice.</p>
+    </div>
+    <div class="relative w-full md:w-1/3 aspect-[4/5] rounded-xl overflow-hidden imp-shadow rotate-2 hover:rotate-0 transition-transform duration-700">
+      <img alt="Paint or artwork detail" class="absolute inset-0 w-full h-full object-cover" src="imagenes/{{CONTACT_HERO_PHOTO}}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="ph absolute inset-0 w-full h-full" style="display:none"><span class="material-symbols-outlined">brush</span><span>{{CONTACT_HERO_PHOTO}}</span></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-surface-dim/40 to-transparent"></div>
+    </div>
+  </header>
+
+  <!-- Main grid: Form + Sidebar -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <!-- Form -->
+    <section class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-2xl shadow-sm">
+      <h2 class="font-headline text-3xl mb-10" data-i18n="contact.form.title">Project Inquiry</h2>
+      <!-- Action points to Formspree: replace YOUR_FORM_ID with your actual Formspree form ID -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-7">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+          <div>
+            <label class="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 ml-1" data-i18n="contact.form.name">Full Name</label>
+            <input name="name" required class="w-full bg-surface-container-highest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary-container outline-none transition-all" type="text" data-i18n-placeholder="contact.form.name.ph" placeholder="Your Name"/>
+          </div>
+          <div>
+            <label class="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 ml-1" data-i18n="contact.form.email">Email Address</label>
+            <input name="email" required class="w-full bg-surface-container-highest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary-container outline-none transition-all" type="email" data-i18n-placeholder="contact.form.email.ph" placeholder="hello@example.com"/>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+          <div>
+            <label class="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 ml-1" data-i18n="contact.form.space">Type of Space</label>
+            <select name="space_type" class="w-full bg-surface-container-highest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary-container outline-none appearance-none">
+              <option data-i18n="contact.form.space.1">Restaurant / Hospitality</option>
+              <option data-i18n="contact.form.space.2">Commercial / Office</option>
+              <option data-i18n="contact.form.space.3">Private Residence</option>
+              <option data-i18n="contact.form.space.4">Public Space</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 ml-1" data-i18n="contact.form.service">Service Required</label>
+            <select name="service" class="w-full bg-surface-container-highest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary-container outline-none appearance-none">
+              <option data-i18n="contact.form.service.1">Bespoke Commission</option>
+              <option data-i18n="contact.form.service.2">Artistic Advice for Spaces</option>
+              <option data-i18n="contact.form.service.3">Exhibition Inquiry</option>
+              <option data-i18n="contact.form.service.4">Other</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 ml-1" data-i18n="contact.form.details">Project Details</label>
+          <textarea name="message" rows="6" class="w-full bg-surface-container-highest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary-container outline-none resize-none transition-all" data-i18n-placeholder="contact.form.details.ph" placeholder="Tell me about your vision for the space..."></textarea>
+        </div>
+        <button class="w-full md:w-auto px-12 py-4 bg-primary text-on-primary rounded-full font-label font-bold uppercase tracking-widest hover:bg-primary-dim transition-all active:scale-95" type="submit" data-i18n="contact.form.submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="lg:col-span-5 space-y-7">
+      <!-- Bespoke Commissions -->
+      <div class="bg-secondary-container p-8 md:p-10 rounded-2xl relative overflow-hidden group">
+        <div class="absolute -right-10 -top-10 w-40 h-40 bg-on-secondary-container/5 rounded-full blur-3xl group-hover:bg-on-secondary-container/10 transition-colors"></div>
+        <div class="relative z-10">
+          <h3 class="font-headline text-2xl text-on-secondary-container mb-4" data-i18n="contact.commissions.title">Bespoke Commissions</h3>
+          <p class="font-body text-on-secondary-container/80 mb-6 leading-relaxed" data-i18n="contact.commissions.p">Custom artworks tailored to your identity. Specialised in working with restaurants and businesses to create unique atmospheres.</p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-4 py-1.5 bg-on-secondary-container/10 text-on-secondary-container text-xs font-bold rounded-full uppercase tracking-tighter">Murals</span>
+            <span class="px-4 py-1.5 bg-on-secondary-container/10 text-on-secondary-container text-xs font-bold rounded-full uppercase tracking-tighter">Large Canvas</span>
+            <span class="px-4 py-1.5 bg-on-secondary-container/10 text-on-secondary-container text-xs font-bold rounded-full uppercase tracking-tighter">Textural Work</span>
+          </div>
+          <a href="#" class="inline-flex items-center gap-2 font-label font-bold text-on-secondary-container group-hover:gap-4 transition-all" data-i18n="contact.commissions.link">Commission Process <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+      <!-- Artistic Advice -->
+      <div class="bg-surface-container-high p-8 rounded-2xl">
+        <h3 class="font-headline text-2xl mb-4" data-i18n="contact.advice.title">Artistic Advice</h3>
+        <p class="font-body text-on-surface-variant mb-6 leading-relaxed" data-i18n="contact.advice.p">Consultation services for interior designers and business owners looking to integrate art seamlessly into architectural environments.</p>
+        <ul class="space-y-3 font-body text-sm mb-2">
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> <span data-i18n="contact.advice.li1">Curation for hospitality</span></li>
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> <span data-i18n="contact.advice.li2">Colour palette synchronisation</span></li>
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> <span data-i18n="contact.advice.li3">Site-specific installations</span></li>
+        </ul>
+      </div>
+      <!-- Studio info -->
+      <div class="bg-surface-container-high p-8 rounded-2xl">
+        <h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6" data-i18n="contact.connect">Connect</h4>
+        <div class="space-y-4 font-body text-sm">
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary">location_on</span>
+            <p data-i18n="contact.location">Madrid, Spain</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary">mail</span>
+            <a href="mailto:studio@florenciacarballo.com" class="hover:text-primary transition-colors">studio@florenciacarballo.com</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary">language</span>
+            <p data-i18n="contact.available">Available for global projects</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Featured image banner -->
+  <section class="mt-20 rounded-3xl overflow-hidden h-80 relative group">
+    <img alt="Commercial space with art" class="absolute inset-0 w-full h-full object-cover" src="imagenes/{{CONTACT_COMMERCIAL_PHOTO}}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+    <div class="ph absolute inset-0 w-full h-full" style="display:none"><span class="material-symbols-outlined">store</span><span>{{CONTACT_COMMERCIAL_PHOTO}}</span></div>
+    <div class="absolute inset-0 bg-primary-dim/20"></div>
+    <div class="absolute bottom-8 left-8 right-8 md:bottom-10 md:left-10 flex justify-between items-end">
+      <div class="bg-surface/90 backdrop-blur-md p-6 rounded-xl max-w-sm">
+        <h5 class="font-headline text-xl mb-2" data-i18n="contact.commercial.title">Commercial Spaces</h5>
+        <p class="font-body text-sm text-on-surface-variant" data-i18n="contact.commercial.p">Elevate your brand experience. Specialised art solutions for the restaurant and commercial industry.</p>
+      </div>
+      <div class="hidden md:flex w-16 h-16 rounded-full bg-surface items-center justify-center text-primary imp-shadow">
+        <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1">palette</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate-50 w-full py-14 px-6 md:px-8 border-t border-slate-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div>
+        <a class="text-lg font-bold text-slate-800 font-headline italic block mb-1" href="index.html">FLORENCIA CARBALLO</a>
+        <p class="text-slate-500 font-label text-xs tracking-wide uppercase" data-i18n="footer.tagline">Art & Personalised Advisory</p>
+      </div>
+      <nav class="flex flex-wrap gap-6 font-label text-sm tracking-wide uppercase text-slate-500">
+        <a class="hover:text-primary transition-colors" href="galeria.html" data-i18n="footer.links.gallery">Gallery</a>
+        <a class="hover:text-primary transition-colors" href="sobre-mi.html" data-i18n="footer.links.studio">Studio</a>
+        <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.commissions">Commissions</a>
+        <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.contact">Contact</a>
+      </nav>
+      <div class="text-slate-500 font-label text-xs tracking-wide">
+        <p class="uppercase mb-1" data-i18n="footer.location">Madrid, Spain</p>
+        <a href="mailto:studio@florenciacarballo.com" class="hover:text-primary transition-colors">studio@florenciacarballo.com</a>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-slate-200 text-center md:text-left">
+      <p class="text-slate-400 font-label text-xs tracking-wide" data-i18n="footer.copyright">© 2024 Florencia Carballo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn=document.getElementById('menu-btn'),menu=document.getElementById('mobile-menu'),icon=document.getElementById('menu-icon');
+  let open=false;
+  btn.addEventListener('click',()=>{open=!open;menu.classList.toggle('hidden',!open);icon.textContent=open?'close':'menu';});
+  menu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{open=false;menu.classList.add('hidden');icon.textContent='menu';}));
+</script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>

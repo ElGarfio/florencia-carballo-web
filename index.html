@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html data-page="home" lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Florencia Carballo — Bespoke impressionist art and artistic advisory for restaurants, commercial spaces and private homes."/>
+  <title>Florencia Carballo — Art & Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config={theme:{extend:{colors:{"primary":"#585e76","primary-dim":"#4c526a","primary-container":"#dce1fe","on-primary":"#faf8ff","on-primary-container":"#4b5168","secondary-container":"#feecce","on-secondary-container":"#635740","tertiary-container":"#e2ffd9","on-tertiary-container":"#4b6447","surface":"#fcf9f5","surface-container":"#f0eee9","surface-container-low":"#f6f3ef","surface-container-lowest":"#ffffff","surface-dim":"#dcdad3","on-surface":"#32332f","on-surface-variant":"#5f5f5b","outline":"#7b7b76","outline-variant":"#b3b2ac"},fontFamily:{"headline":["Noto Serif","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"}}}}</script>
+  <style>
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+    .canvas-overlay{background:linear-gradient(to bottom,rgba(252,249,245,0) 0%,rgba(252,249,245,0.35) 45%,rgba(252,249,245,1) 100%)}
+    .imp-shadow{box-shadow:0 40px 60px -15px rgba(88,94,118,0.14)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    .fu{animation:fadeUp .7s ease forwards}.d1{animation-delay:.1s;opacity:0}.d2{animation-delay:.25s;opacity:0}.d3{animation-delay:.4s;opacity:0}.d4{animation-delay:.55s;opacity:0}
+    .ph{background:linear-gradient(135deg,#e4e2dc,#eae8e2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#7b7b76;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .ph .material-symbols-outlined{font-size:28px;opacity:.35}
+  </style>
+  <script src="i18n.js" defer></script>
+</head>
+<body class="bg-surface font-body text-on-surface">
+
+<!-- NAVIGATION -->
+<header class="bg-white/70 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-outline-variant/20">
+  <div class="flex justify-between items-center px-6 md:px-8 h-20 max-w-7xl mx-auto">
+    <div class="flex items-center gap-3">
+      <button id="menu-btn" class="text-slate-700 hover:opacity-70 md:hidden"><span class="material-symbols-outlined" id="menu-icon">menu</span></button>
+      <a class="text-xl md:text-2xl font-black text-slate-800 tracking-tighter font-headline italic" href="index.html">FLORENCIA CARBALLO</a>
+    </div>
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" data-nav="home" data-i18n="nav.home" class="font-label text-sm tracking-wide uppercase transition-colors duration-200">Home</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Gallery</a>
+      <a href="sobre-mi.html" data-nav="studio" data-i18n="nav.studio" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Studio</a>
+      <a href="contacto.html" data-nav="contact" data-i18n="nav.contact" class="font-label text-sm tracking-wide uppercase transition-colors duration-200 text-slate-500 hover:text-slate-800">Contact</a>
+      <div class="flex items-center border border-outline-variant/40 rounded-full overflow-hidden ml-1">
+        <button onclick="FC.setLang('en')" data-lang-btn="en" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all">EN</button>
+        <button onclick="FC.setLang('it')" data-lang-btn="it" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all border-x border-outline-variant/40">IT</button>
+        <button onclick="FC.setLang('es')" data-lang-btn="es" class="font-label text-xs font-bold tracking-widest px-2.5 py-1.5 transition-all">ES</button>
+      </div>
+    </nav>
+    <button class="text-slate-700 hover:opacity-70"><span class="material-symbols-outlined">shopping_basket</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white/98 border-t border-outline-variant/20 px-6 py-5">
+    <nav class="flex flex-col gap-1 mb-5">
+      <a href="index.html" data-nav="home" data-i18n="nav.home" class="font-label text-sm tracking-widest uppercase py-3 border-b border-outline-variant/20">Home</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3 border-b border-outline-variant/20">Gallery</a>
+      <a href="sobre-mi.html" data-nav="studio" data-i18n="nav.studio" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3 border-b border-outline-variant/20">Studio</a>
+      <a href="contacto.html" data-nav="contact" data-i18n="nav.contact" class="font-label text-sm tracking-widest uppercase text-slate-600 py-3">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <span class="font-label text-xs text-slate-400 uppercase tracking-widest">Lang</span>
+      <div class="flex border border-outline-variant/40 rounded-full overflow-hidden">
+        <button onclick="FC.setLang('en')" data-lang-btn="en" class="font-label text-xs font-bold px-3 py-1.5 transition-all">EN</button>
+        <button onclick="FC.setLang('it')" data-lang-btn="it" class="font-label text-xs font-bold px-3 py-1.5 transition-all border-x border-outline-variant/40">IT</button>
+        <button onclick="FC.setLang('es')" data-lang-btn="es" class="font-label text-xs font-bold px-3 py-1.5 transition-all">ES</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="relative min-h-screen flex flex-col justify-end overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img alt="Florencia Carballo artwork" class="w-full h-full object-cover" src="imagenes/obra-hero.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">image</span><span>Add: imagenes/obra-hero.jpg</span></div>
+      <div class="absolute inset-0 canvas-overlay"></div>
+    </div>
+    <div class="relative z-10 px-6 md:px-8 pb-20 md:pb-32 max-w-7xl mx-auto w-full">
+      <div class="flex flex-col md:flex-row items-end justify-between gap-12">
+        <div class="max-w-2xl">
+          <span class="fu d1 inline-block px-4 py-1.5 mb-6 rounded-full bg-tertiary-container text-on-tertiary-container font-label text-xs font-bold tracking-widest uppercase" data-i18n="home.badge">Bespoke Art</span>
+          <h1 class="fu d2 font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-[0.9] tracking-tight mb-8" data-i18n-html="home.hero.h1">Elevating <span class="italic font-light">Spaces</span><br/>with Soul</h1>
+          <p class="fu d3 font-body text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed mb-10" data-i18n="home.hero.p">Specialised in personalised commissions for restaurants, commercial spaces and private homes.</p>
+          <div class="fu d4 flex flex-wrap gap-4">
+            <a href="contacto.html" class="inline-block rounded-full bg-primary px-10 py-4 text-on-primary font-label font-bold text-sm tracking-wide hover:scale-105 hover:bg-primary-dim imp-shadow transition-all duration-300" data-i18n="home.cta.commission">Request a Commission</a>
+            <a href="galeria.html" class="inline-block rounded-full bg-surface-container-lowest border border-outline-variant/30 px-10 py-4 text-primary font-label font-bold text-sm tracking-wide hover:bg-surface-container-low transition-all duration-300" data-i18n="home.cta.gallery">View Gallery</a>
+          </div>
+        </div>
+        <div class="hidden lg:block w-64 p-4 bg-surface-container-lowest rounded-xl imp-shadow rotate-3 translate-y-10 hover:rotate-1 transition-transform duration-500">
+          <div class="w-full aspect-square rounded-lg mb-3 overflow-hidden relative">
+            <img alt="Residential commission detail" class="w-full h-full object-cover" src="imagenes/detalle-obra.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">image</span><span>detalle-obra.jpg</span></div>
+          </div>
+          <p class="font-label text-xs text-on-surface-variant uppercase tracking-widest font-bold" data-i18n="home.inset.label">Residential</p>
+          <p class="font-headline italic text-on-surface text-sm mt-0.5" data-i18n="home.inset.caption">Harmony at home, 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES BENTO -->
+  <section class="py-20 md:py-28 px-6 md:px-8 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="inline-block font-label text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3" data-i18n="home.services.badge">Services</span>
+        <h2 class="font-headline text-3xl md:text-5xl text-on-surface" data-i18n="home.services.title">Art for every space</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
+        <div class="md:col-span-8 bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row min-h-[380px] group">
+          <div class="w-full md:w-3/5 h-56 md:h-auto overflow-hidden relative">
+            <img alt="Restaurant commission" class="w-full h-full object-cover" src="imagenes/restaurante.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">restaurant</span><span>restaurante.jpg</span></div>
+          </div>
+          <div class="w-full md:w-2/5 p-8 md:p-10 flex flex-col justify-center">
+            <h3 class="font-headline text-2xl md:text-3xl mb-4 text-on-surface" data-i18n="home.gastro.title">Gastronomy & Art</h3>
+            <p class="font-body text-on-surface-variant text-base leading-relaxed mb-6" data-i18n="home.gastro.p">Unique atmospheres for restaurants.</p>
+            <a class="text-primary font-label text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all duration-200" href="contacto.html">
+              <span data-i18n="home.gastro.link">Commercial advisory</span><span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-4 rounded-xl overflow-hidden relative group min-h-[300px]">
+          <img alt="Colour studies" class="absolute inset-0 w-full h-full object-cover" src="imagenes/estudio-color.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">palette</span><span>estudio-color.jpg</span></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h3 class="text-white font-headline text-2xl italic" data-i18n="home.color.title">Colour Studies</h3>
+            <p class="text-white/80 font-label text-xs uppercase tracking-widest mt-2" data-i18n="home.color.sub">Full Customisation</p>
+          </div>
+        </div>
+        <div class="md:col-span-5 bg-primary-container/20 rounded-xl p-8 md:p-10 flex flex-col justify-center min-h-[280px]">
+          <span class="material-symbols-outlined text-primary/25 mb-4" style="font-size:56px">format_quote</span>
+          <blockquote class="font-headline italic text-2xl md:text-3xl text-on-primary-container leading-snug" data-i18n="home.quote.text">"Art is not only what hangs on the wall…"</blockquote>
+          <cite class="mt-6 font-label text-xs uppercase tracking-widest font-bold text-primary not-italic" data-i18n="home.quote.author">— Florencia Carballo</cite>
+        </div>
+        <div class="md:col-span-7 rounded-xl overflow-hidden min-h-[280px] relative group">
+          <img alt="Corporate project" class="absolute inset-0 w-full h-full object-cover" src="imagenes/proyecto-comercial.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">store</span><span>proyecto-comercial.jpg</span></div>
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+            <div class="bg-white p-6 md:p-8 rounded-xl imp-shadow text-center scale-95 group-hover:scale-100 transition-transform duration-500">
+              <h3 class="font-headline text-xl md:text-2xl mb-2" data-i18n="home.corporate.title">Corporate Projects</h3>
+              <p class="text-on-surface-variant text-sm max-w-xs" data-i18n="home.corporate.p">Brushstrokes that bring warmth and professionalism to offices.</p>
+              <a href="contacto.html" class="inline-block mt-4 text-primary font-label text-xs font-bold uppercase tracking-widest hover:opacity-70" data-i18n="home.corporate.link">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="py-20 md:py-28 px-6 md:px-8 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="inline-block font-label text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-3" data-i18n="home.process.badge">Process</span>
+        <h2 class="font-headline text-3xl md:text-5xl text-on-surface" data-i18n="home.process.title">How do we work together?</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="flex flex-col items-start gap-4 p-6 rounded-xl hover:bg-surface-container transition-colors">
+          <div class="w-11 h-11 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container font-label font-bold text-sm">01</div>
+          <h3 class="font-headline text-xl text-on-surface" data-i18n="home.step1.title">Initial consultation</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="home.step1.p">We discuss the space, the existing colour palette and the identity you want to convey.</p>
+        </div>
+        <div class="flex flex-col items-start gap-4 p-6 rounded-xl hover:bg-surface-container transition-colors">
+          <div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-label font-bold text-sm">02</div>
+          <h3 class="font-headline text-xl text-on-surface" data-i18n="home.step2.title">Artistic proposal</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="home.step2.p">I present sketches and style references tailored to your project.</p>
+        </div>
+        <div class="flex flex-col items-start gap-4 p-6 rounded-xl hover:bg-surface-container transition-colors">
+          <div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-label font-bold text-sm">03</div>
+          <h3 class="font-headline text-xl text-on-surface" data-i18n="home.step3.title">Creation</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="home.step3.p">I execute the work with regular progress updates.</p>
+        </div>
+        <div class="flex flex-col items-start gap-4 p-6 rounded-xl hover:bg-surface-container transition-colors">
+          <div class="w-11 h-11 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container font-label font-bold text-sm">04</div>
+          <h3 class="font-headline text-xl text-on-surface" data-i18n="home.step4.title">Installation</h3>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="home.step4.p">The work arrives ready to hang, with advice on ideal placement.</p>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="contacto.html" class="inline-block rounded-full bg-primary px-10 py-4 text-on-primary font-label font-bold text-sm tracking-wide hover:scale-105 hover:bg-primary-dim imp-shadow transition-all duration-300" data-i18n="home.process.cta">Start a project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-20 md:py-28 px-6 md:px-8 bg-surface relative overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center opacity-[0.04] pointer-events-none select-none">
+      <span class="font-headline font-black italic text-primary" style="font-size:20rem;line-height:1">FC</span>
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+      <h2 class="font-headline text-4xl md:text-6xl italic text-on-surface mb-6 leading-tight" data-i18n="home.cta2.title">Do you have a space that wants to tell a story?</h2>
+      <p class="font-body text-on-surface-variant text-lg mb-10 max-w-xl mx-auto leading-relaxed" data-i18n="home.cta2.p">Every commission is a dialogue.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contacto.html" class="inline-block rounded-full bg-primary px-10 py-4 text-on-primary font-label font-bold text-sm tracking-wide hover:scale-105 hover:bg-primary-dim imp-shadow transition-all duration-300" data-i18n="home.cta2.btn1">Write to me</a>
+        <a href="galeria.html" class="inline-block rounded-full border border-outline-variant px-10 py-4 text-primary font-label font-bold text-sm tracking-wide hover:bg-surface-container-low transition-all duration-300" data-i18n="home.cta2.btn2">View portfolio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate-50 w-full py-14 px-6 md:px-8 border-t border-slate-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div>
+        <a class="text-lg font-bold text-slate-800 font-headline italic block mb-1" href="index.html">FLORENCIA CARBALLO</a>
+        <p class="text-slate-500 font-label text-xs tracking-wide uppercase" data-i18n="footer.tagline">Art & Personalised Advisory</p>
+      </div>
+      <nav class="flex flex-wrap gap-6 font-label text-sm tracking-wide uppercase text-slate-500">
+        <a class="hover:text-primary transition-colors" href="galeria.html" data-i18n="footer.links.gallery">Gallery</a>
+        <a class="hover:text-primary transition-colors" href="sobre-mi.html" data-i18n="footer.links.studio">Studio</a>
+        <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.commissions">Commissions</a>
+        <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.contact">Contact</a>
+      </nav>
+      <div class="text-slate-500 font-label text-xs tracking-wide">
+        <p class="uppercase mb-1" data-i18n="footer.location">Madrid, Spain</p>
+        <a href="mailto:studio@florenciacarballo.com" class="hover:text-primary transition-colors">studio@florenciacarballo.com</a>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-slate-200 text-center md:text-left">
+      <p class="text-slate-400 font-label text-xs tracking-wide" data-i18n="footer.copyright">© 2024 Florencia Carballo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn=document.getElementById('menu-btn'),menu=document.getElementById('mobile-menu'),icon=document.getElementById('menu-icon');
+  let open=false;
+  btn.addEventListener('click',()=>{open=!open;menu.classList.toggle('hidden',!open);icon.textContent=open?'close':'menu';});
+  menu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{open=false;menu.classList.add('hidden');icon.textContent='menu';}));
+</script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>

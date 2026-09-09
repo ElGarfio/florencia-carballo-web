@@ -1,0 +1,44 @@
+nav_home:
+  en: Home
+  it: Home
+  es: Inicio
+nav_gallery:
+  en: Gallery
+  it: Galleria
+  es: Galería
+nav_studio:
+  en: Studio
+  it: Studio
+  es: Studio
+nav_contact:
+  en: Contact
+  it: Contatti
+  es: Contacto
+footer_tagline:
+  en: Art & Personalised Advisory
+  it: Arte e Consulenza Personalizzata
+  es: Arte y Asesoramiento Personalizado
+footer_copyright:
+  en: © 2024 Florencia Carballo. All rights reserved.
+  it: © 2024 Florencia Carballo. Tutti i diritti riservati.
+  es: © 2024 Florencia Carballo. Todos los derechos reservados.
+footer_location:
+  en: Madrid, Spain
+  it: Madrid, Spagna
+  es: Madrid, España
+footer_links_gallery:
+  en: Gallery
+  it: Galleria
+  es: Galería
+footer_links_studio:
+  en: Studio
+  it: Studio
+  es: Studio
+footer_links_commissions:
+  en: Commissions
+  it: Commissioni
+  es: Comisiones
+footer_links_contact:
+  en: Contact
+  it: Contatti
+  es: Contacto

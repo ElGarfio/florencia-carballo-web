@@ -1,0 +1,484 @@
+{
+  "home": [
+    {
+      "key": "home.badge",
+      "field": "home_badge"
+    },
+    {
+      "key": "home.hero.h1",
+      "field": "home_hero_h1"
+    },
+    {
+      "key": "home.hero.p",
+      "field": "home_hero_p"
+    },
+    {
+      "key": "home.cta.commission",
+      "field": "home_cta_commission"
+    },
+    {
+      "key": "home.cta.gallery",
+      "field": "home_cta_gallery"
+    },
+    {
+      "key": "home.inset.label",
+      "field": "home_inset_label"
+    },
+    {
+      "key": "home.inset.caption",
+      "field": "home_inset_caption"
+    },
+    {
+      "key": "home.services.badge",
+      "field": "home_services_badge"
+    },
+    {
+      "key": "home.services.title",
+      "field": "home_services_title"
+    },
+    {
+      "key": "home.gastro.title",
+      "field": "home_gastro_title"
+    },
+    {
+      "key": "home.gastro.p",
+      "field": "home_gastro_p"
+    },
+    {
+      "key": "home.gastro.link",
+      "field": "home_gastro_link"
+    },
+    {
+      "key": "home.color.title",
+      "field": "home_color_title"
+    },
+    {
+      "key": "home.color.sub",
+      "field": "home_color_sub"
+    },
+    {
+      "key": "home.quote.text",
+      "field": "home_quote_text"
+    },
+    {
+      "key": "home.quote.author",
+      "field": "home_quote_author"
+    },
+    {
+      "key": "home.corporate.title",
+      "field": "home_corporate_title"
+    },
+    {
+      "key": "home.corporate.p",
+      "field": "home_corporate_p"
+    },
+    {
+      "key": "home.corporate.link",
+      "field": "home_corporate_link"
+    },
+    {
+      "key": "home.process.badge",
+      "field": "home_process_badge"
+    },
+    {
+      "key": "home.process.title",
+      "field": "home_process_title"
+    },
+    {
+      "key": "home.step1.title",
+      "field": "home_step1_title"
+    },
+    {
+      "key": "home.step1.p",
+      "field": "home_step1_p"
+    },
+    {
+      "key": "home.step2.title",
+      "field": "home_step2_title"
+    },
+    {
+      "key": "home.step2.p",
+      "field": "home_step2_p"
+    },
+    {
+      "key": "home.step3.title",
+      "field": "home_step3_title"
+    },
+    {
+      "key": "home.step3.p",
+      "field": "home_step3_p"
+    },
+    {
+      "key": "home.step4.title",
+      "field": "home_step4_title"
+    },
+    {
+      "key": "home.step4.p",
+      "field": "home_step4_p"
+    },
+    {
+      "key": "home.process.cta",
+      "field": "home_process_cta"
+    },
+    {
+      "key": "home.cta2.title",
+      "field": "home_cta2_title"
+    },
+    {
+      "key": "home.cta2.p",
+      "field": "home_cta2_p"
+    },
+    {
+      "key": "home.cta2.btn1",
+      "field": "home_cta2_btn1"
+    },
+    {
+      "key": "home.cta2.btn2",
+      "field": "home_cta2_btn2"
+    }
+  ],
+  "gallery": [
+    {
+      "key": "gallery.badge",
+      "field": "gallery_badge"
+    },
+    {
+      "key": "gallery.h1",
+      "field": "gallery_h1"
+    },
+    {
+      "key": "gallery.p",
+      "field": "gallery_p"
+    },
+    {
+      "key": "gallery.filter.all",
+      "field": "gallery_filter_all"
+    },
+    {
+      "key": "gallery.filter.landscapes",
+      "field": "gallery_filter_landscapes"
+    },
+    {
+      "key": "gallery.filter.portraits",
+      "field": "gallery_filter_portraits"
+    },
+    {
+      "key": "gallery.filter.stilllife",
+      "field": "gallery_filter_stilllife"
+    },
+    {
+      "key": "gallery.quote",
+      "field": "gallery_quote"
+    },
+    {
+      "key": "gallery.quote.author",
+      "field": "gallery_quote_author"
+    },
+    {
+      "key": "gallery.invite.title",
+      "field": "gallery_invite_title"
+    },
+    {
+      "key": "gallery.invite.p",
+      "field": "gallery_invite_p"
+    },
+    {
+      "key": "gallery.invite.placeholder",
+      "field": "gallery_invite_placeholder"
+    },
+    {
+      "key": "gallery.invite.btn",
+      "field": "gallery_invite_btn"
+    },
+    {
+      "key": "gallery.badge.available",
+      "field": "gallery_badge_available"
+    },
+    {
+      "key": "gallery.badge.sold",
+      "field": "gallery_badge_sold"
+    },
+    {
+      "key": "gallery.badge.commission",
+      "field": "gallery_badge_commission"
+    },
+    {
+      "key": "gallery.purchase",
+      "field": "gallery_purchase"
+    },
+    {
+      "key": "gallery.commission",
+      "field": "gallery_commission"
+    },
+    {
+      "key": "gallery.request",
+      "field": "gallery_request"
+    },
+    {
+      "key": "gallery.filter.abstract",
+      "field": "gallery_filter_abstract"
+    },
+    {
+      "key": "gallery.filter.seascapes",
+      "field": "gallery_filter_seascapes"
+    },
+    {
+      "key": "gallery.filter.urban",
+      "field": "gallery_filter_urban"
+    }
+  ],
+  "studio": [
+    {
+      "key": "studio.badge",
+      "field": "studio_badge"
+    },
+    {
+      "key": "studio.h1",
+      "field": "studio_h1"
+    },
+    {
+      "key": "studio.hero.p",
+      "field": "studio_hero_p"
+    },
+    {
+      "key": "studio.hero.btn",
+      "field": "studio_hero_btn"
+    },
+    {
+      "key": "studio.hero.quote",
+      "field": "studio_hero_quote"
+    },
+    {
+      "key": "studio.vision.title",
+      "field": "studio_vision_title"
+    },
+    {
+      "key": "studio.vision.p1",
+      "field": "studio_vision_p1"
+    },
+    {
+      "key": "studio.vision.p2",
+      "field": "studio_vision_p2"
+    },
+    {
+      "key": "studio.excellence.title",
+      "field": "studio_excellence_title"
+    },
+    {
+      "key": "studio.excellence.subtitle",
+      "field": "studio_excellence_subtitle"
+    },
+    {
+      "key": "studio.gastro.title",
+      "field": "studio_gastro_title"
+    },
+    {
+      "key": "studio.gastro.p",
+      "field": "studio_gastro_p"
+    },
+    {
+      "key": "studio.commercial.title",
+      "field": "studio_commercial_title"
+    },
+    {
+      "key": "studio.commercial.p",
+      "field": "studio_commercial_p"
+    },
+    {
+      "key": "studio.advisor",
+      "field": "studio_advisor"
+    },
+    {
+      "key": "studio.homes.title",
+      "field": "studio_homes_title"
+    },
+    {
+      "key": "studio.homes.p",
+      "field": "studio_homes_p"
+    },
+    {
+      "key": "studio.bigquote",
+      "field": "studio_bigquote"
+    }
+  ],
+  "contact": [
+    {
+      "key": "contact.h1",
+      "field": "contact_h1"
+    },
+    {
+      "key": "contact.hero.p",
+      "field": "contact_hero_p"
+    },
+    {
+      "key": "contact.form.title",
+      "field": "contact_form_title"
+    },
+    {
+      "key": "contact.form.name",
+      "field": "contact_form_name"
+    },
+    {
+      "key": "contact.form.name.ph",
+      "field": "contact_form_name_ph"
+    },
+    {
+      "key": "contact.form.email",
+      "field": "contact_form_email"
+    },
+    {
+      "key": "contact.form.email.ph",
+      "field": "contact_form_email_ph"
+    },
+    {
+      "key": "contact.form.space",
+      "field": "contact_form_space"
+    },
+    {
+      "key": "contact.form.space.1",
+      "field": "contact_form_space_1"
+    },
+    {
+      "key": "contact.form.space.2",
+      "field": "contact_form_space_2"
+    },
+    {
+      "key": "contact.form.space.3",
+      "field": "contact_form_space_3"
+    },
+    {
+      "key": "contact.form.space.4",
+      "field": "contact_form_space_4"
+    },
+    {
+      "key": "contact.form.service",
+      "field": "contact_form_service"
+    },
+    {
+      "key": "contact.form.service.1",
+      "field": "contact_form_service_1"
+    },
+    {
+      "key": "contact.form.service.2",
+      "field": "contact_form_service_2"
+    },
+    {
+      "key": "contact.form.service.3",
+      "field": "contact_form_service_3"
+    },
+    {
+      "key": "contact.form.service.4",
+      "field": "contact_form_service_4"
+    },
+    {
+      "key": "contact.form.details",
+      "field": "contact_form_details"
+    },
+    {
+      "key": "contact.form.details.ph",
+      "field": "contact_form_details_ph"
+    },
+    {
+      "key": "contact.form.submit",
+      "field": "contact_form_submit"
+    },
+    {
+      "key": "contact.commissions.title",
+      "field": "contact_commissions_title"
+    },
+    {
+      "key": "contact.commissions.p",
+      "field": "contact_commissions_p"
+    },
+    {
+      "key": "contact.commissions.link",
+      "field": "contact_commissions_link"
+    },
+    {
+      "key": "contact.advice.title",
+      "field": "contact_advice_title"
+    },
+    {
+      "key": "contact.advice.p",
+      "field": "contact_advice_p"
+    },
+    {
+      "key": "contact.advice.li1",
+      "field": "contact_advice_li1"
+    },
+    {
+      "key": "contact.advice.li2",
+      "field": "contact_advice_li2"
+    },
+    {
+      "key": "contact.advice.li3",
+      "field": "contact_advice_li3"
+    },
+    {
+      "key": "contact.connect",
+      "field": "contact_connect"
+    },
+    {
+      "key": "contact.location",
+      "field": "contact_location"
+    },
+    {
+      "key": "contact.available",
+      "field": "contact_available"
+    },
+    {
+      "key": "contact.commercial.title",
+      "field": "contact_commercial_title"
+    },
+    {
+      "key": "contact.commercial.p",
+      "field": "contact_commercial_p"
+    }
+  ],
+  "global": [
+    {
+      "key": "nav.home",
+      "field": "nav_home"
+    },
+    {
+      "key": "nav.gallery",
+      "field": "nav_gallery"
+    },
+    {
+      "key": "nav.studio",
+      "field": "nav_studio"
+    },
+    {
+      "key": "nav.contact",
+      "field": "nav_contact"
+    },
+    {
+      "key": "footer.tagline",
+      "field": "footer_tagline"
+    },
+    {
+      "key": "footer.copyright",
+      "field": "footer_copyright"
+    },
+    {
+      "key": "footer.location",
+      "field": "footer_location"
+    },
+    {
+      "key": "footer.links.gallery",
+      "field": "footer_links_gallery"
+    },
+    {
+      "key": "footer.links.studio",
+      "field": "footer_links_studio"
+    },
+    {
+      "key": "footer.links.commissions",
+      "field": "footer_links_commissions"
+    },
+    {
+      "key": "footer.links.contact",
+      "field": "footer_links_contact"
+    }
+  ]
+}

@@ -74,9 +74,9 @@
     <div class="w-full md:w-1/2 relative group">
       <div class="absolute -inset-4 bg-surface-container-high rounded-3xl -z-10 transition-transform duration-700 group-hover:scale-105"></div>
       <div class="relative rounded-2xl overflow-hidden aspect-[4/5] imp-shadow">
-        <img alt="Professional portrait of the artist" class="w-full h-full object-cover" src="imagenes/florencia-foto.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <img alt="Professional portrait of the artist" class="w-full h-full object-cover" src="imagenes/{{STUDIO_PORTRAIT}}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
         <div class="ph w-full h-full" style="display:none">
-          <span class="material-symbols-outlined">person</span><span>florencia-foto.jpg</span>
+          <span class="material-symbols-outlined">person</span><span>{{STUDIO_PORTRAIT}}</span>
         </div>
         <!-- Overlapping quote card -->
         <div class="absolute bottom-8 -left-6 bg-surface-container-lowest p-6 rounded-xl imp-shadow max-w-xs hidden lg:block border-l-4 border-primary">
@@ -107,12 +107,12 @@
       </div>
       <div class="md:col-span-7 grid grid-cols-2 gap-5 relative">
         <div class="aspect-square rounded-xl overflow-hidden mt-12 imp-shadow relative">
-          <img alt="Studio process detail 1" class="w-full h-full object-cover" src="imagenes/proceso-1.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-          <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">brush</span><span>proceso-1.jpg</span></div>
+          <img alt="Studio process detail 1" class="w-full h-full object-cover" src="imagenes/{{STUDIO_PROCESS_1}}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">brush</span><span>{{STUDIO_PROCESS_1}}</span></div>
         </div>
         <div class="aspect-square rounded-xl overflow-hidden imp-shadow relative">
-          <img alt="Studio process detail 2" class="w-full h-full object-cover" src="imagenes/proceso-2.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-          <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">light_mode</span><span>proceso-2.jpg</span></div>
+          <img alt="Studio process detail 2" class="w-full h-full object-cover" src="imagenes/{{STUDIO_PROCESS_2}}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">light_mode</span><span>{{STUDIO_PROCESS_2}}</span></div>
         </div>
         <div class="absolute -bottom-6 right-0 font-label text-[8rem] font-black text-on-surface/[0.03] select-none pointer-events-none leading-none">ART</div>
       </div>
@@ -129,8 +129,8 @@
       <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-5 h-auto md:h-[600px]">
         <!-- Gastronomic — col 2, row 2 -->
         <div class="md:col-span-2 md:row-span-2 bg-surface-container-highest rounded-2xl overflow-hidden relative group">
-          <img alt="Gastronomic haven with art" class="absolute inset-0 w-full h-full object-cover" src="imagenes/gastronomia.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-          <div class="ph absolute inset-0 w-full h-full" style="display:none"><span class="material-symbols-outlined">restaurant</span><span>gastronomia.jpg</span></div>
+          <img alt="Gastronomic haven with art" class="absolute inset-0 w-full h-full object-cover" src="imagenes/{{STUDIO_GASTRO}}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="ph absolute inset-0 w-full h-full" style="display:none"><span class="material-symbols-outlined">restaurant</span><span>{{STUDIO_GASTRO}}</span></div>
           <div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent flex flex-col justify-end p-8">
             <h3 class="text-2xl font-headline text-on-surface mb-2" data-i18n="studio.gastro.title">Gastronomic Havens</h3>
             <p class="text-sm font-body text-on-surface-variant max-w-xs" data-i18n="studio.gastro.p">Enhancing dining experiences through evocative light and colour palettes.</p>

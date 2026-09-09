@@ -48,6 +48,15 @@ collections:
           - {label: "Colour Studies Photo", name: "color_photo", widget: "image", hint: "Photo behind 'Colour Studies' card"}
           - {label: "Corporate Projects Photo", name: "corporate_photo", widget: "image", hint: "Photo behind 'Corporate Projects' card"}
 
+      - name: "studio"
+        label: "Studio Page Images"
+        file: "content/pages/studio.yml"
+        fields:
+          - {label: "Artist Portrait", name: "portrait", widget: "image", hint: "Photo of Florencia, 4:5 vertical ratio, top of the Studio page"}
+          - {label: "Process Photo 1", name: "process_1", widget: "image", hint: "Small square photo, studio process"}
+          - {label: "Process Photo 2", name: "process_2", widget: "image", hint: "Small square photo, studio process"}
+          - {label: "Gastronomic Havens Photo", name: "gastro_photo", widget: "image", hint: "Large photo in the 'Bespoke Excellence' section"}
+
       - name: "contact"
         label: "Contact Information"
         file: "content/pages/contact.yml"
@@ -58,3 +67,853 @@ collections:
           - {label: "Formspree Form ID", name: "formspree_id", widget: "string", required: false, hint: "Your Formspree form ID (e.g., xpzgkwqr)"}
           - {label: "Contact Page Hero Photo", name: "hero_photo", widget: "image", hint: "Close-up photo next to the contact form title"}
           - {label: "Commercial Spaces Photo", name: "commercial_photo", widget: "image", hint: "Wide banner photo near the bottom of the contact page"}
+      - name: "text_home"
+        label: "Homepage Text"
+        file: "content/pages/text-home.yml"
+        fields:
+          - label: "Badge"
+            name: "home_badge"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Hero H1"
+            name: "home_hero_h1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Hero P"
+            name: "home_hero_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Cta Commission"
+            name: "home_cta_commission"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Cta Gallery"
+            name: "home_cta_gallery"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Inset Label"
+            name: "home_inset_label"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Inset Caption"
+            name: "home_inset_caption"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Services Badge"
+            name: "home_services_badge"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Services Title"
+            name: "home_services_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Gastro Title"
+            name: "home_gastro_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Gastro P"
+            name: "home_gastro_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Gastro Link"
+            name: "home_gastro_link"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Color Title"
+            name: "home_color_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Color Sub"
+            name: "home_color_sub"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Quote Text"
+            name: "home_quote_text"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Quote Author"
+            name: "home_quote_author"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Corporate Title"
+            name: "home_corporate_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Corporate P"
+            name: "home_corporate_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Corporate Link"
+            name: "home_corporate_link"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Process Badge"
+            name: "home_process_badge"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Process Title"
+            name: "home_process_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Step1 Title"
+            name: "home_step1_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Step1 P"
+            name: "home_step1_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Step2 Title"
+            name: "home_step2_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Step2 P"
+            name: "home_step2_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Step3 Title"
+            name: "home_step3_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Step3 P"
+            name: "home_step3_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Step4 Title"
+            name: "home_step4_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Step4 P"
+            name: "home_step4_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Process Cta"
+            name: "home_process_cta"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Cta2 Title"
+            name: "home_cta2_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Cta2 P"
+            name: "home_cta2_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Cta2 Btn1"
+            name: "home_cta2_btn1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Cta2 Btn2"
+            name: "home_cta2_btn2"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+
+      - name: "text_gallery"
+        label: "Gallery Page Text"
+        file: "content/pages/text-gallery.yml"
+        fields:
+          - label: "Badge"
+            name: "gallery_badge"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "H1"
+            name: "gallery_h1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "P"
+            name: "gallery_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Filter All"
+            name: "gallery_filter_all"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Filter Landscapes"
+            name: "gallery_filter_landscapes"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Filter Portraits"
+            name: "gallery_filter_portraits"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Filter Stilllife"
+            name: "gallery_filter_stilllife"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Quote"
+            name: "gallery_quote"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Quote Author"
+            name: "gallery_quote_author"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Invite Title"
+            name: "gallery_invite_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Invite P"
+            name: "gallery_invite_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Invite Placeholder"
+            name: "gallery_invite_placeholder"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Invite Btn"
+            name: "gallery_invite_btn"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Badge Available"
+            name: "gallery_badge_available"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Badge Sold"
+            name: "gallery_badge_sold"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Badge Commission"
+            name: "gallery_badge_commission"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Purchase"
+            name: "gallery_purchase"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Commission"
+            name: "gallery_commission"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Request"
+            name: "gallery_request"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Filter Abstract"
+            name: "gallery_filter_abstract"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Filter Seascapes"
+            name: "gallery_filter_seascapes"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Filter Urban"
+            name: "gallery_filter_urban"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+
+      - name: "text_studio"
+        label: "Studio Page Text"
+        file: "content/pages/text-studio.yml"
+        fields:
+          - label: "Badge"
+            name: "studio_badge"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "H1"
+            name: "studio_h1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Hero P"
+            name: "studio_hero_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Hero Btn"
+            name: "studio_hero_btn"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Hero Quote"
+            name: "studio_hero_quote"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Vision Title"
+            name: "studio_vision_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Vision P1"
+            name: "studio_vision_p1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Vision P2"
+            name: "studio_vision_p2"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Excellence Title"
+            name: "studio_excellence_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Excellence Subtitle"
+            name: "studio_excellence_subtitle"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Gastro Title"
+            name: "studio_gastro_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Gastro P"
+            name: "studio_gastro_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Commercial Title"
+            name: "studio_commercial_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Commercial P"
+            name: "studio_commercial_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Advisor"
+            name: "studio_advisor"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Homes Title"
+            name: "studio_homes_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Homes P"
+            name: "studio_homes_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Bigquote"
+            name: "studio_bigquote"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+
+      - name: "text_contact"
+        label: "Contact Page Text"
+        file: "content/pages/text-contact.yml"
+        fields:
+          - label: "H1"
+            name: "contact_h1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Hero P"
+            name: "contact_hero_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Form Title"
+            name: "contact_form_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Name"
+            name: "contact_form_name"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Name Placeholder"
+            name: "contact_form_name_ph"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Email"
+            name: "contact_form_email"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Email Placeholder"
+            name: "contact_form_email_ph"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Space"
+            name: "contact_form_space"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Space 1"
+            name: "contact_form_space_1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Space 2"
+            name: "contact_form_space_2"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Space 3"
+            name: "contact_form_space_3"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Space 4"
+            name: "contact_form_space_4"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Service"
+            name: "contact_form_service"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Service 1"
+            name: "contact_form_service_1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Service 2"
+            name: "contact_form_service_2"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Service 3"
+            name: "contact_form_service_3"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Service 4"
+            name: "contact_form_service_4"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Details"
+            name: "contact_form_details"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Details Placeholder"
+            name: "contact_form_details_ph"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Form Submit"
+            name: "contact_form_submit"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Commissions Title"
+            name: "contact_commissions_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Commissions P"
+            name: "contact_commissions_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Commissions Link"
+            name: "contact_commissions_link"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Advice Title"
+            name: "contact_advice_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Advice P"
+            name: "contact_advice_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+          - label: "Advice Li1"
+            name: "contact_advice_li1"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Advice Li2"
+            name: "contact_advice_li2"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Advice Li3"
+            name: "contact_advice_li3"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Connect"
+            name: "contact_connect"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Location"
+            name: "contact_location"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Available"
+            name: "contact_available"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Commercial Title"
+            name: "contact_commercial_title"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Commercial P"
+            name: "contact_commercial_p"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "text"}
+              - {label: "Italian", name: "it", widget: "text"}
+              - {label: "Spanish", name: "es", widget: "text"}
+
+      - name: "text_global"
+        label: "Global (Navigation & Footer)"
+        file: "content/pages/text-global.yml"
+        fields:
+          - label: "Nav Home"
+            name: "nav_home"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Nav Gallery"
+            name: "nav_gallery"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Nav Studio"
+            name: "nav_studio"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Nav Contact"
+            name: "nav_contact"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Footer Tagline"
+            name: "footer_tagline"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Footer Copyright"
+            name: "footer_copyright"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Footer Location"
+            name: "footer_location"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Footer Links Gallery"
+            name: "footer_links_gallery"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Footer Links Studio"
+            name: "footer_links_studio"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Footer Links Commissions"
+            name: "footer_links_commissions"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}
+          - label: "Footer Links Contact"
+            name: "footer_links_contact"
+            widget: "object"
+            fields:
+              - {label: "English", name: "en", widget: "string"}
+              - {label: "Italian", name: "it", widget: "string"}
+              - {label: "Spanish", name: "es", widget: "string"}

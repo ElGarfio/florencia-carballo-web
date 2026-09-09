@@ -1,0 +1,88 @@
+gallery_badge:
+  en: Portfolio
+  it: Portfolio
+  es: Portfolio
+gallery_h1:
+  en: The Impressionist <span class="italic font-light text-primary">Soul</span>
+  it: L'Anima <span class="italic font-light text-primary">Impressionista</span>
+  es: El Alma <span class="italic font-light text-primary">Impresionista</span>
+gallery_p:
+  en: Exploring the fleeting beauty of light and the vibrant textures of the natural world through the curated works of Florencia Carballo.
+  it: Esplorare la bellezza fugace della luce e le vivaci trame del mondo naturale attraverso le opere di Florencia Carballo.
+  es: Explorando la belleza fugaz de la luz y las vibrantes texturas del mundo natural a través de las obras de Florencia Carballo.
+gallery_filter_all:
+  en: All Works
+  it: Tutte le Opere
+  es: Todas las Obras
+gallery_filter_landscapes:
+  en: Landscapes
+  it: Paesaggi
+  es: Paisajes
+gallery_filter_portraits:
+  en: Portraits
+  it: Ritratti
+  es: Retratos
+gallery_filter_stilllife:
+  en: Still Life
+  it: Natura Morta
+  es: Naturaleza Muerta
+gallery_quote:
+  en: '"Everyone discusses my art and pretends to understand, as if it were necessary to understand, when it is simply necessary to love."'
+  it: '"Tutti discutono della mia arte e fingono di capirla, come se fosse necessario capirla, quando è semplicemente necessario amarla."'
+  es: '"Todo el mundo habla de mi arte y pretende entenderlo, como si fuera necesario entenderlo, cuando simplemente es necesario amarlo."'
+gallery_quote_author:
+  en: — Claude Monet
+  it: — Claude Monet
+  es: — Claude Monet
+gallery_invite_title:
+  en: Enter the Studio
+  it: Entra nello Studio
+  es: Entrar al Studio
+gallery_invite_p:
+  en: Receive exclusive invitations to private viewings and previews of commissioned works.
+  it: Ricevi inviti esclusivi per anteprime private e presentazioni di opere su commissione.
+  es: Recibí invitaciones exclusivas para vistas previas privadas y presentaciones de obras por encargo.
+gallery_invite_placeholder:
+  en: Your email address
+  it: Il tuo indirizzo email
+  es: Tu dirección de email
+gallery_invite_btn:
+  en: Join
+  it: Iscriviti
+  es: Unirse
+gallery_badge_available:
+  en: Available
+  it: Disponibile
+  es: Disponible
+gallery_badge_sold:
+  en: Sold
+  it: Venduto
+  es: Vendido
+gallery_badge_commission:
+  en: Commission Only
+  it: Solo Commissione
+  es: Solo Comisión
+gallery_purchase:
+  en: Purchase
+  it: Acquista
+  es: Comprar
+gallery_commission:
+  en: Commission Similar
+  it: Commissiona Simile
+  es: Comisionar Similar
+gallery_request:
+  en: Request Commission
+  it: Richiedi Commissione
+  es: Solicitar Comisión
+gallery_filter_abstract:
+  en: Abstract
+  it: Astratto
+  es: Abstracto
+gallery_filter_seascapes:
+  en: Seascapes
+  it: Marine
+  es: Marinas
+gallery_filter_urban:
+  en: Urban
+  it: Urbano
+  es: Urbano

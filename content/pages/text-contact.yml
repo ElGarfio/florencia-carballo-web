@@ -1,0 +1,132 @@
+contact_h1:
+  en: Design &<br/><span class="italic text-primary">Atmosphere</span>
+  it: Design &<br/><span class="italic text-primary">Atmosfera</span>
+  es: Diseño &<br/><span class="italic text-primary">Atmósfera</span>
+contact_hero_p:
+  en: Transforming spaces through bespoke commissions and professional artistic advice. From private homes to vibrant commercial environments.
+  it: Trasformare gli spazi attraverso commissioni su misura e consulenza artistica professionale. Dalle abitazioni private ai vivaci ambienti commerciali.
+  es: Transformando espacios a través de comisiones a medida y asesoramiento artístico profesional. Desde hogares privados hasta vibrantes entornos comerciales.
+contact_form_title:
+  en: Project Inquiry
+  it: Richiesta di Progetto
+  es: Consulta de Proyecto
+contact_form_name:
+  en: Full Name
+  it: Nome Completo
+  es: Nombre Completo
+contact_form_name_ph:
+  en: Your Name
+  it: Il tuo nome
+  es: Tu nombre
+contact_form_email:
+  en: Email Address
+  it: Indirizzo Email
+  es: Correo Electrónico
+contact_form_email_ph:
+  en: hello@example.com
+  it: ciao@esempio.com
+  es: hola@ejemplo.com
+contact_form_space:
+  en: Type of Space
+  it: Tipo di Spazio
+  es: Tipo de Espacio
+contact_form_space_1:
+  en: Restaurant / Hospitality
+  it: Ristorante / Ospitalità
+  es: Restaurante / Hospitalidad
+contact_form_space_2:
+  en: Commercial / Office
+  it: Commerciale / Ufficio
+  es: Comercial / Oficina
+contact_form_space_3:
+  en: Private Residence
+  it: Abitazione Privata
+  es: Residencia Privada
+contact_form_space_4:
+  en: Public Space
+  it: Spazio Pubblico
+  es: Espacio Público
+contact_form_service:
+  en: Service Required
+  it: Servizio Richiesto
+  es: Servicio Requerido
+contact_form_service_1:
+  en: Bespoke Commission
+  it: Commissione Su Misura
+  es: Comisión a Medida
+contact_form_service_2:
+  en: Artistic Advice for Spaces
+  it: Consulenza Artistica per Spazi
+  es: Asesoramiento Artístico para Espacios
+contact_form_service_3:
+  en: Exhibition Inquiry
+  it: Richiesta di Esposizione
+  es: Consulta de Exposición
+contact_form_service_4:
+  en: Other
+  it: Altro
+  es: Otro
+contact_form_details:
+  en: Project Details
+  it: Dettagli del Progetto
+  es: Detalles del Proyecto
+contact_form_details_ph:
+  en: Tell me about your vision for the space...
+  it: Raccontami la tua visione per lo spazio...
+  es: Contame tu visión para el espacio...
+contact_form_submit:
+  en: Send Message
+  it: Invia Messaggio
+  es: Enviar Mensaje
+contact_commissions_title:
+  en: Bespoke Commissions
+  it: Commissioni Su Misura
+  es: Comisiones a Medida
+contact_commissions_p:
+  en: Custom artworks tailored to your identity. I specialise in working with restaurants and commercial businesses to create unique atmospheres that resonate with their brand.
+  it: Opere d'arte personalizzate per la tua identità. Sono specializzata nel lavorare con ristoranti e aziende commerciali per creare atmosfere uniche.
+  es: Obras de arte personalizadas para tu identidad. Me especializo en trabajar con restaurantes y empresas comerciales para crear atmósferas únicas que resuenen con su marca.
+contact_commissions_link:
+  en: Commission Process
+  it: Processo di Commissione
+  es: Proceso de Comisión
+contact_advice_title:
+  en: Artistic Advice
+  it: Consulenza Artistica
+  es: Asesoramiento Artístico
+contact_advice_p:
+  en: Consultation services for interior designers and business owners looking to integrate art seamlessly into architectural environments.
+  it: Servizi di consulenza per interior designer e imprenditori che desiderano integrare l'arte negli ambienti architettonici.
+  es: Servicios de consultoría para diseñadores de interiores y empresarios que buscan integrar el arte en entornos arquitectónicos.
+contact_advice_li1:
+  en: Curation for hospitality
+  it: Curation per l'ospitalità
+  es: Curaduría para hospitalidad
+contact_advice_li2:
+  en: Colour palette synchronisation
+  it: Sincronizzazione della palette cromatica
+  es: Sincronización de paleta de colores
+contact_advice_li3:
+  en: Site-specific installations
+  it: Installazioni site-specific
+  es: Instalaciones específicas por sitio
+contact_connect:
+  en: Connect
+  it: Contatti
+  es: Conectar
+contact_location:
+  en: Madrid, Spain
+  it: Madrid, Spagna
+  es: Madrid, España
+contact_available:
+  en: Available for global projects
+  it: Disponibile per progetti globali
+  es: Disponible para proyectos globales
+contact_commercial_title:
+  en: Commercial Spaces
+  it: Spazi Commerciali
+  es: Espacios Comerciales
+contact_commercial_p:
+  en: Elevate your brand experience. Specialised art solutions for the restaurant and commercial industry.
+  it: Valorizza la tua esperienza di brand. Soluzioni artistiche specializzate per il settore della ristorazione e commerciale.
+  es: Elevá tu experiencia de marca. Soluciones artísticas especializadas para el sector gastronómico y comercial.

@@ -1,0 +1,136 @@
+home_badge:
+  en: Bespoke Art
+  it: Arte Su Misura
+  es: Arte a Medida
+home_hero_h1:
+  en: Elevating <span class="italic font-light">Spaces</span><br/>with Soul
+  it: Elevare gli <span class="italic font-light">Spazi</span><br/>con Anima
+  es: Elevando <span class="italic font-light">Espacios</span><br/>con Alma
+home_hero_p:
+  en: Specialised in personalised commissions for restaurants, commercial spaces and private homes. Exclusive artistic advisory to transform every environment.
+  it: Specializzata in commissioni personalizzate per ristoranti, spazi commerciali e abitazioni private. Consulenza artistica esclusiva per trasformare ogni ambiente.
+  es: Especializada en comisiones personalizadas para restaurantes, espacios comerciales y hogares. Asesoramiento artístico exclusivo para transformar cada entorno.
+home_cta_commission:
+  en: Request a Commission
+  it: Richiedi una Commissione
+  es: Solicitar Comisión
+home_cta_gallery:
+  en: View Gallery
+  it: Vedi la Galleria
+  es: Ver Galería
+home_inset_label:
+  en: Residential
+  it: Residenziale
+  es: Residencial
+home_inset_caption:
+  en: Harmony at home, 2024
+  it: Armonia in casa, 2024
+  es: Armonía en el hogar, 2024
+home_services_badge:
+  en: Services
+  it: Servizi
+  es: Servicios
+home_services_title:
+  en: Art for every space
+  it: Arte per ogni spazio
+  es: Arte para cada espacio
+home_gastro_title:
+  en: Gastronomy & Art
+  it: Gastronomia & Arte
+  es: Gastronomía & Arte
+home_gastro_p:
+  en: Unique atmospheres for restaurants. Works that dialogue with the identity of your kitchen and the design of your dining room.
+  it: Atmosfere uniche per ristoranti. Opere che dialogano con l'identità della tua cucina e il design della sala.
+  es: Atmósferas únicas para restaurantes. Obras que dialogan con la identidad de tu cocina y el diseño del salón.
+home_gastro_link:
+  en: Commercial advisory
+  it: Consulenza commerciale
+  es: Asesoramiento comercial
+home_color_title:
+  en: Colour Studies
+  it: Studi di Colore
+  es: Estudios de Color
+home_color_sub:
+  en: Full Customisation
+  it: Personalizzazione Totale
+  es: Personalización Total
+home_quote_text:
+  en: '"Art is not only what hangs on the wall — it is the emotion that transforms the space where we live and work."'
+  it: '"L''arte non è solo ciò che pende dal muro — è l''emozione che trasforma lo spazio in cui viviamo e lavoriamo."'
+  es: '"El arte no es solo lo que cuelga, es la emoción que transforma el espacio donde vivimos y trabajamos."'
+home_quote_author:
+  en: — Florencia Carballo
+  it: — Florencia Carballo
+  es: — Florencia Carballo
+home_corporate_title:
+  en: Corporate Projects
+  it: Progetti Aziendali
+  es: Proyectos Corporativos
+home_corporate_p:
+  en: Brushstrokes that bring warmth and professionalism to offices and waiting rooms.
+  it: Pennellate che portano calore e professionalità in uffici e sale d'attesa.
+  es: Pinceladas que aportan calidez y profesionalismo a oficinas y salas de espera.
+home_corporate_link:
+  en: Enquire
+  it: Informazioni
+  es: Consultar
+home_process_badge:
+  en: Process
+  it: Processo
+  es: Proceso
+home_process_title:
+  en: How do we work together?
+  it: Come lavoriamo insieme?
+  es: ¿Cómo trabajamos juntos?
+home_step1_title:
+  en: Initial consultation
+  it: Consulenza iniziale
+  es: Consulta inicial
+home_step1_p:
+  en: We discuss the space, the existing colour palette and the identity you want to convey.
+  it: Parliamo dello spazio, della palette cromatica esistente e dell'identità che vuoi trasmettere.
+  es: Conversamos sobre el espacio, la paleta de colores y la identidad que querés transmitir.
+home_step2_title:
+  en: Artistic proposal
+  it: Proposta artistica
+  es: Propuesta artística
+home_step2_p:
+  en: I present sketches and style references tailored to your specific project.
+  it: Presento bozzetti e riferimenti stilistici adattati al tuo progetto specifico.
+  es: Presento bocetos y referencias de estilo adaptadas a tu proyecto específico.
+home_step3_title:
+  en: Creation
+  it: Creazione
+  es: Creación
+home_step3_p:
+  en: I execute the work with regular progress updates, so you are always informed.
+  it: Eseguo l'opera con aggiornamenti periodici del progresso, in modo che tu sia sempre informato.
+  es: Ejecuto la obra con actualizaciones periódicas del proceso, para que estés siempre al tanto.
+home_step4_title:
+  en: Installation
+  it: Installazione
+  es: Instalación
+home_step4_p:
+  en: The work arrives ready to hang. I advise on the ideal placement to maximise visual impact.
+  it: L'opera arriva pronta per essere appesa. Ti consiglio sulla posizione ideale per massimizzare l'impatto visivo.
+  es: La obra llega lista para colgar. Te asesoro sobre la posición ideal para maximizar el impacto visual.
+home_process_cta:
+  en: Start a project
+  it: Inizia un progetto
+  es: Iniciar un proyecto
+home_cta2_title:
+  en: Do you have a space that wants to tell a story?
+  it: Hai uno spazio che vuole raccontare una storia?
+  es: ¿Tenés un espacio que quiere contar una historia?
+home_cta2_p:
+  en: Every commission is a dialogue. Let's talk about your space and how art can transform it.
+  it: Ogni commissione è un dialogo. Parliamo del tuo spazio e di come l'arte può trasformarlo.
+  es: Cada comisión es un diálogo. Hablemos sobre tu espacio y cómo el arte puede transformarlo.
+home_cta2_btn1:
+  en: Write to me
+  it: Scrivimi
+  es: Escribirme
+home_cta2_btn2:
+  en: View portfolio
+  it: Vedi il portfolio
+  es: Ver el portfolio

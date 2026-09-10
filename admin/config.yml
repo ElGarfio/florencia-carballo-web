@@ -58,6 +58,43 @@ collections:
           - {label: "Process Photo 2", name: "process_2", widget: "image", hint: "Small square photo, studio process", required: false}
           - {label: "Gastronomic Havens Photo", name: "gastro_photo", widget: "image", hint: "Large photo in the 'Bespoke Excellence' section", required: false}
 
+      - name: "gallery_images"
+        label: "Gallery Page Images"
+        file: "content/pages/gallery.yml"
+        fields:
+          - {label: "Newsletter Section Photo", name: "invite_photo", widget: "image", required: false, hint: "Photo next to the 'Enter the Studio' sign-up box"}
+
+      - name: "testimonials"
+        label: "Client Testimonials"
+        file: "content/pages/testimonials.yml"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            required: false
+            hint: "Shown on the Studio page. Add as many as you like, or leave empty to hide the section."
+            fields:
+              - {label: "Client name", name: "author", widget: "string"}
+              - {label: "Role / business (optional)", name: "role", widget: "string", required: false, hint: "e.g. Owner, Ristorante Bella Vista"}
+              - label: "Quote"
+                name: "quote_en"
+                widget: "text"
+              - {label: "Quote (Italian)", name: "quote_it", widget: "text", required: false}
+              - {label: "Quote (Spanish)", name: "quote_es", widget: "text", required: false}
+
+      - name: "seo"
+        label: "SEO (Search Engines & Browser Tab)"
+        file: "content/pages/seo.yml"
+        fields:
+          - {label: "Homepage - Browser Tab Title", name: "home_title", widget: "string"}
+          - {label: "Homepage - Search Engine Description", name: "home_description", widget: "text"}
+          - {label: "Gallery - Browser Tab Title", name: "gallery_title", widget: "string"}
+          - {label: "Gallery - Search Engine Description", name: "gallery_description", widget: "text"}
+          - {label: "Studio - Browser Tab Title", name: "studio_title", widget: "string"}
+          - {label: "Studio - Search Engine Description", name: "studio_description", widget: "text"}
+          - {label: "Contact - Browser Tab Title", name: "contact_title", widget: "string"}
+          - {label: "Contact - Search Engine Description", name: "contact_description", widget: "text"}
+
       - name: "contact"
         label: "Contact Information"
         file: "content/pages/contact.yml"
@@ -65,6 +102,9 @@ collections:
           - {label: "Email", name: "email", widget: "string", default: "studio@florenciacarballo.com"}
           - {label: "Location", name: "location", widget: "string", default: "Madrid, Spain"}
           - {label: "Instagram URL", name: "instagram", widget: "string", required: false}
+          - {label: "Facebook URL", name: "facebook", widget: "string", required: false}
+          - {label: "WhatsApp Link", name: "whatsapp", widget: "string", required: false, hint: "e.g. https://wa.me/34600000000"}
+          - {label: "Pinterest URL", name: "pinterest", widget: "string", required: false}
           - {label: "Formspree Form ID", name: "formspree_id", widget: "string", required: false, hint: "Your Formspree form ID (e.g., xpzgkwqr)"}
           - {label: "Contact Page Hero Photo", name: "hero_photo", widget: "image", hint: "Close-up photo next to the contact form title", required: false}
           - {label: "Commercial Spaces Photo", name: "commercial_photo", widget: "image", hint: "Wide banner photo near the bottom of the contact page", required: false}
@@ -808,13 +848,6 @@ collections:
               - {label: "English", name: "en", widget: "string", required: false}
               - {label: "Italian", name: "it", widget: "string", required: false}
               - {label: "Spanish", name: "es", widget: "string", required: false}
-          - label: "Location"
-            name: "contact_location"
-            widget: "object"
-            fields:
-              - {label: "English", name: "en", widget: "string", required: false}
-              - {label: "Italian", name: "it", widget: "string", required: false}
-              - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Available"
             name: "contact_available"
             widget: "object"
@@ -878,13 +911,6 @@ collections:
               - {label: "Spanish", name: "es", widget: "string", required: false}
           - label: "Footer Copyright"
             name: "footer_copyright"
-            widget: "object"
-            fields:
-              - {label: "English", name: "en", widget: "string", required: false}
-              - {label: "Italian", name: "it", widget: "string", required: false}
-              - {label: "Spanish", name: "es", widget: "string", required: false}
-          - label: "Footer Location"
-            name: "footer_location"
             widget: "object"
             fields:
               - {label: "English", name: "en", widget: "string", required: false}

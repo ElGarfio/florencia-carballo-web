@@ -24,6 +24,23 @@ const homepageData = fs.existsSync(homepageFile)
   ? yaml.load(fs.readFileSync(homepageFile, 'utf8'))
   : {};
 
+// Read SEO settings
+const seoFile = path.join(__dirname, 'content/pages/seo.yml');
+const seoData = fs.existsSync(seoFile) ? yaml.load(fs.readFileSync(seoFile, 'utf8')) : {};
+
+// Read testimonials
+const testimonialsFile = path.join(__dirname, 'content/pages/testimonials.yml');
+const testimonialsData = fs.existsSync(testimonialsFile)
+  ? (yaml.load(fs.readFileSync(testimonialsFile, 'utf8')) || {})
+  : {};
+const testimonials = testimonialsData.items || [];
+
+// Read Gallery page image settings
+const galleryImagesFile = path.join(__dirname, 'content/pages/gallery.yml');
+const galleryImagesData = fs.existsSync(galleryImagesFile)
+  ? yaml.load(fs.readFileSync(galleryImagesFile, 'utf8'))
+  : {};
+
 // Strip any leading "imagenes/" or "/imagenes/" the CMS media widget may have stored,
 // since templates already write src="imagenes/{{TOKEN}}"
 function cleanImagePath(value, fallback) {
@@ -46,6 +63,34 @@ function buildPageFromTemplate(templateFile, outputFile, tokens) {
   console.log(`✅ Generated ${outputFile}`);
 }
 
+// Contact info shared across every page's footer (and the Connect sidebar on Contact page)
+const sharedContactTokens = {
+  CONTACT_LOCATION: contactData.location || 'Madrid, Spain',
+  CONTACT_EMAIL: contactData.email || 'studio@florenciacarballo.com',
+};
+
+// Formspree ID and Instagram link only matter on the Contact page
+const contactPageTokens = {
+  FORMSPREE_ID: contactData.formspree_id || 'YOUR_FORM_ID',
+  SOCIAL_LINKS_HTML: buildSocialLinksHtml(contactData),
+};
+
+function buildSocialLinksHtml(data) {
+  const links = [
+    { key: 'instagram', icon: 'photo_camera', label: 'Instagram' },
+    { key: 'facebook', icon: 'thumb_up', label: 'Facebook' },
+    { key: 'whatsapp', icon: 'chat', label: 'WhatsApp' },
+    { key: 'pinterest', icon: 'push_pin', label: 'Pinterest' },
+  ];
+  return links
+    .filter(l => data[l.key])
+    .map(l => `<div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary">${l.icon}</span>
+            <a href="${data[l.key]}" target="_blank" rel="noopener" class="hover:text-primary transition-colors">${l.label}</a>
+          </div>`)
+    .join('\n          ');
+}
+
 // Build index.html from index-template.html + homepage.yml
 buildPageFromTemplate('index-template.html', 'index.html', {
   HERO_BACKGROUND: cleanImagePath(homepageData.hero_background, 'obra-hero.jpg'),
@@ -53,6 +98,9 @@ buildPageFromTemplate('index-template.html', 'index.html', {
   GASTRO_PHOTO: cleanImagePath(homepageData.gastro_photo, 'restaurante.jpg'),
   COLOR_PHOTO: cleanImagePath(homepageData.color_photo, 'estudio-color.jpg'),
   CORPORATE_PHOTO: cleanImagePath(homepageData.corporate_photo, 'proyecto-comercial.jpg'),
+  SEO_TITLE: seoData.home_title || 'Florencia Carballo — Art & Advisory',
+  SEO_DESCRIPTION: seoData.home_description || '',
+  ...sharedContactTokens,
 });
 
 // Read studio image settings
@@ -65,7 +113,35 @@ const studioData = fs.existsSync(studioFile)
 buildPageFromTemplate('contacto-template.html', 'contacto.html', {
   CONTACT_HERO_PHOTO: cleanImagePath(contactData.hero_photo, 'contacto-hero.jpg'),
   CONTACT_COMMERCIAL_PHOTO: cleanImagePath(contactData.commercial_photo, 'espacio-comercial.jpg'),
+  SEO_TITLE: seoData.contact_title || 'Contact — Florencia Carballo',
+  SEO_DESCRIPTION: seoData.contact_description || '',
+  ...sharedContactTokens,
+  ...contactPageTokens,
 });
+
+// ---- Testimonials section (Studio page) ----
+function generateTestimonialsSection(items) {
+  if (!items || items.length === 0) return '';
+  const cards = items.map((t, i) => `
+        <div class="bg-surface-container-low rounded-2xl p-8 flex flex-col gap-4">
+          <span class="material-symbols-outlined text-primary/40" style="font-size:32px">format_quote</span>
+          <p class="font-body text-on-surface-variant italic flex-1" data-i18n="testimonial.${i + 1}.quote">${t.quote_en || ''}</p>
+          <div>
+            <p class="font-label font-bold text-sm text-on-surface">${t.author || ''}</p>
+            ${t.role ? `<p class="font-label text-xs text-outline uppercase tracking-widest">${t.role}</p>` : ''}
+          </div>
+        </div>`).join('\n');
+
+  return `<section class="py-24 px-8 md:px-24 bg-surface-container-low">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <h2 class="text-4xl serif-headline italic text-center">What clients say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-${Math.min(items.length, 3)} gap-6">${cards}
+      </div>
+    </div>
+  </section>`;
+}
+const testimonialsSectionHtml = generateTestimonialsSection(testimonials);
+// ---- end testimonials section ----
 
 // ---- i18n.js generation (text content editable from /admin) ----
 const i18nManifestFile = path.join(__dirname, 'i18n-manifest.json');
@@ -98,6 +174,15 @@ artworks.forEach((artwork, index) => {
     const mediumKey = `medium_${lang}`;
     dict[lang][`art.${n}.title`] = artwork[titleKey] || artwork.title_en || '';
     dict[lang][`art.${n}.medium`] = `${artwork[mediumKey] || artwork.medium_en || ''} · ${artwork.year || ''}`;
+    dict[lang][`art.${n}.description`] = artwork[`description_${lang}`] || artwork.description_en || '';
+  });
+});
+
+// Fill testimonial.N.quote from Client Testimonials
+testimonials.forEach((t, index) => {
+  const n = index + 1;
+  LANGS.forEach(lang => {
+    dict[lang][`testimonial.${n}.quote`] = t[`quote_${lang}`] || t.quote_en || '';
   });
 });
 
@@ -113,6 +198,10 @@ buildPageFromTemplate('sobre-mi-template.html', 'sobre-mi.html', {
   STUDIO_PROCESS_1: cleanImagePath(studioData.process_1, 'proceso-1.jpg'),
   STUDIO_PROCESS_2: cleanImagePath(studioData.process_2, 'proceso-2.jpg'),
   STUDIO_GASTRO: cleanImagePath(studioData.gastro_photo, 'gastronomia.jpg'),
+  SEO_TITLE: seoData.studio_title || 'Studio — Florencia Carballo',
+  SEO_DESCRIPTION: seoData.studio_description || '',
+  TESTIMONIALS_SECTION: testimonialsSectionHtml,
+  ...sharedContactTokens,
 });
 
 // Function to generate artwork card HTML
@@ -149,6 +238,14 @@ function generateArtworkCard(artwork, index) {
   const images = Array.isArray(artwork.images) ? artwork.images : (artwork.image ? [artwork.image] : ['placeholder.jpg']);
   const mainImage = images[0];
   const hasMultipleImages = images.length > 1;
+
+  // Optional price/dimensions line, only shown when the artist filled them in
+  const priceText = (artwork.status === 'available' && artwork.price) ? `€${artwork.price}` : '';
+  const dimsText = artwork.dimensions || '';
+  const extraDetails = [dimsText, priceText].filter(Boolean).join(' · ');
+  const extraDetailsHtml = extraDetails
+    ? `<p class="font-label text-white/70 text-[11px] uppercase tracking-widest mb-2">${extraDetails}</p>`
+    : '';
 
   let buttonHtml = '';
   if (artwork.status === 'available' && artwork.stripe_link) {
@@ -198,7 +295,7 @@ function generateArtworkCard(artwork, index) {
         </h3>
         <p class="font-label text-white/80 text-xs uppercase tracking-widest mb-3">
           <span data-i18n="art.${index + 1}.medium" data-i18n-en="${artwork.medium_en} · ${artwork.year}" data-i18n-it="${artwork.medium_it} · ${artwork.year}" data-i18n-es="${artwork.medium_es} · ${artwork.year}">${artwork.medium_en} · ${artwork.year}</span>
-        </p>${buttonHtml}
+        </p>${extraDetailsHtml}${buttonHtml}
       </div>
       <div class="p-4 md:hidden">
         <h3 class="font-headline text-on-surface text-lg italic">
@@ -296,6 +393,18 @@ function filterGallery(category) {
 if (!finalHtml.includes('function filterGallery')) {
   finalHtml = finalHtml.replace('</body>', filterScript + '\n</body>');
 }
+
+// Replace shared contact tokens (footer location/email) here too
+const galeriaTokens = {
+  ...sharedContactTokens,
+  SEO_TITLE: seoData.gallery_title || 'Gallery — Florencia Carballo',
+  SEO_DESCRIPTION: seoData.gallery_description || '',
+  FORMSPREE_ID: contactData.formspree_id || 'YOUR_FORM_ID',
+  GALLERY_INVITE_PHOTO: cleanImagePath(galleryImagesData.invite_photo, 'studio-photo.jpg'),
+};
+Object.entries(galeriaTokens).forEach(([token, value]) => {
+  finalHtml = finalHtml.split(`{{${token}}}`).join(value);
+});
 
 // Write the final galeria.html
 fs.writeFileSync(path.join(__dirname, 'galeria.html'), finalHtml);

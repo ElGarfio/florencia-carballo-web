@@ -2,8 +2,8 @@
 <html data-page="gallery" lang="en">
 <head>
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Florencia Carballo — Gallery of bespoke impressionist artworks for commercial and residential spaces."/>
-  <title>Gallery — Florencia Carballo</title>
+  <meta name="description" content="{{SEO_DESCRIPTION}}"/>
+  <title>{{SEO_TITLE}}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -96,13 +96,15 @@
     <div class="flex-1">
       <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary-container mb-5" data-i18n="gallery.invite.title">Enter the Studio</h2>
       <p class="text-on-primary-container text-lg max-w-md mb-8" data-i18n="gallery.invite.p">Receive exclusive invitations to private viewings and previews of commissioned works.</p>
-      <div class="flex flex-col sm:flex-row gap-4 max-w-md">
-        <input class="flex-1 bg-surface-container-lowest border-none rounded-full px-6 py-4 text-on-surface focus:ring-2 focus:ring-primary outline-none" type="email" data-i18n-placeholder="gallery.invite.placeholder" placeholder="Your email address"/>
-        <button class="bg-primary text-on-primary rounded-full px-8 py-4 font-bold tracking-wide hover:bg-primary-dim transition-colors whitespace-nowrap" data-i18n="gallery.invite.btn">Join</button>
-      </div>
+      <form action="https://formspree.io/f/{{FORMSPREE_ID}}" method="POST" class="flex flex-col sm:flex-row gap-4 max-w-md">
+        <input type="hidden" name="_subject" value="New newsletter signup"/>
+        <input name="email" required class="flex-1 bg-surface-container-lowest border-none rounded-full px-6 py-4 text-on-surface focus:ring-2 focus:ring-primary outline-none" type="email" data-i18n-placeholder="gallery.invite.placeholder" placeholder="Your email address"/>
+        <button type="submit" class="bg-primary text-on-primary rounded-full px-8 py-4 font-bold tracking-wide hover:bg-primary-dim transition-colors whitespace-nowrap" data-i18n="gallery.invite.btn">Join</button>
+      </form>
     </div>
-    <div class="flex-shrink-0 w-56 aspect-[4/5] rounded-2xl overflow-hidden imp-shadow rotate-3">
-      <div class="ph w-full h-full"><span class="material-symbols-outlined">image</span><span>studio-photo.jpg</span></div>
+    <div class="flex-shrink-0 w-56 aspect-[4/5] rounded-2xl overflow-hidden imp-shadow rotate-3 relative">
+      <img alt="Studio photo" class="w-full h-full object-cover" src="imagenes/{{GALLERY_INVITE_PHOTO}}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="ph absolute inset-0" style="display:none"><span class="material-symbols-outlined">image</span><span>{{GALLERY_INVITE_PHOTO}}</span></div>
     </div>
   </section>
 </main>
@@ -122,8 +124,8 @@
         <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.contact">Contact</a>
       </nav>
       <div class="text-slate-500 font-label text-xs tracking-wide">
-        <p class="uppercase mb-1" data-i18n="footer.location">Madrid, Spain</p>
-        <a href="mailto:studio@florenciacarballo.com" class="hover:text-primary transition-colors">studio@florenciacarballo.com</a>
+        <p class="uppercase mb-1">{{CONTACT_LOCATION}}</p>
+        <a href="mailto:{{CONTACT_EMAIL}}" class="hover:text-primary transition-colors">{{CONTACT_EMAIL}}</a>
       </div>
     </div>
     <div class="mt-8 pt-6 border-t border-slate-200 text-center md:text-left">
@@ -160,16 +162,22 @@
   </div>
   
   <div id="image-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 font-label text-sm tracking-widest"></div>
+  <p id="lightbox-description" class="absolute bottom-16 left-1/2 -translate-x-1/2 max-w-xl text-center text-white/70 text-sm px-4"></p>
 </div>
 
 <script>
 let currentImages = [];
 let currentIndex = 0;
+let currentArtworkIndex = 0;
 
 function openLightbox(artworkIndex, images) {
   currentImages = images;
   currentIndex = 0;
+  currentArtworkIndex = artworkIndex;
   showImage();
+  const descEl = document.getElementById('lightbox-description');
+  const key = 'art.' + (artworkIndex + 1) + '.description';
+  descEl.textContent = (window.FC && FC.T[FC.LANG] && FC.T[FC.LANG][key]) || '';
   document.getElementById('lightbox').classList.remove('hidden');
   document.getElementById('lightbox').classList.add('flex');
   document.body.style.overflow = 'hidden';

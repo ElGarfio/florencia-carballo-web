@@ -2,8 +2,8 @@
 <html data-page="contact" lang="en">
 <head>
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Florencia Carballo — Contact and commission inquiries for bespoke art and artistic advisory services."/>
-  <title>Contact — Florencia Carballo</title>
+  <meta name="description" content="{{SEO_DESCRIPTION}}"/>
+  <title>{{SEO_TITLE}}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -77,8 +77,8 @@
     <!-- Form -->
     <section class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-2xl shadow-sm">
       <h2 class="font-headline text-3xl mb-10" data-i18n="contact.form.title">Project Inquiry</h2>
-      <!-- Action points to Formspree: replace YOUR_FORM_ID with your actual Formspree form ID -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-7">
+      <!-- Action points to Formspree, ID set from Site Settings -> Contact Information -->
+      <form action="https://formspree.io/f/{{FORMSPREE_ID}}" method="POST" class="space-y-7">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
           <div>
             <label class="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 ml-1" data-i18n="contact.form.name">Full Name</label>
@@ -149,16 +149,17 @@
         <div class="space-y-4 font-body text-sm">
           <div class="flex items-start gap-4">
             <span class="material-symbols-outlined text-primary">location_on</span>
-            <p data-i18n="contact.location">Madrid, Spain</p>
+            <p>{{CONTACT_LOCATION}}</p>
           </div>
           <div class="flex items-center gap-4">
             <span class="material-symbols-outlined text-primary">mail</span>
-            <a href="mailto:studio@florenciacarballo.com" class="hover:text-primary transition-colors">studio@florenciacarballo.com</a>
+            <a href="mailto:{{CONTACT_EMAIL}}" class="hover:text-primary transition-colors">{{CONTACT_EMAIL}}</a>
           </div>
           <div class="flex items-center gap-4">
             <span class="material-symbols-outlined text-primary">language</span>
             <p data-i18n="contact.available">Available for global projects</p>
           </div>
+          {{SOCIAL_LINKS_HTML}}
         </div>
       </div>
     </aside>
@@ -196,8 +197,8 @@
         <a class="hover:text-primary transition-colors" href="contacto.html" data-i18n="footer.links.contact">Contact</a>
       </nav>
       <div class="text-slate-500 font-label text-xs tracking-wide">
-        <p class="uppercase mb-1" data-i18n="footer.location">Madrid, Spain</p>
-        <a href="mailto:studio@florenciacarballo.com" class="hover:text-primary transition-colors">studio@florenciacarballo.com</a>
+        <p class="uppercase mb-1">{{CONTACT_LOCATION}}</p>
+        <a href="mailto:{{CONTACT_EMAIL}}" class="hover:text-primary transition-colors">{{CONTACT_EMAIL}}</a>
       </div>
     </div>
     <div class="mt-8 pt-6 border-t border-slate-200 text-center md:text-left">

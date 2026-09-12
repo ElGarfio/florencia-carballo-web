@@ -8,7 +8,7 @@ medium_it: Impasto su tela
 medium_es: Impasto sobre lienzo
 year: "2024"
 images:
-  - imagentestjpg.jpg
+  - ""
 status: sold
 order: 2
 dimensions: 70×90cm

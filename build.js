@@ -235,7 +235,7 @@ function generateArtworkCard(artwork, index) {
   const minHeight = 300 + (index % 3) * 50;
 
   // Get images array - handle both old single image format and new array format
-  const images = Array.isArray(artwork.images) ? artwork.images : (artwork.image ? [artwork.image] : ['placeholder.jpg']);
+  const images = (Array.isArray(artwork.images) ? artwork.images : (artwork.image ? [artwork.image] : ['placeholder.jpg'])).map(img => cleanImagePath(img, img));
   const mainImage = images[0];
   const hasMultipleImages = images.length > 1;
 

@@ -8,7 +8,6 @@ medium_it: Impasto su tela
 medium_es: Impasto sobre lienzo
 year: "2024"
 images:
-  - obra-2.jpg
   - /imagenes/isla-tropical-maldivas-playa-arena-blanca-mar_87394-9524.avif
 status: sold
 order: 2
